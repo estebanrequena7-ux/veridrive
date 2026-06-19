@@ -16,47 +16,47 @@
 const TEST_SIGNALS = [
     {
         id: 'ts-1',
-        label: 'Le vendeur est à l'étranger ou ne peut pas faire visiter',
+        label: "Le vendeur est à l'étranger ou ne peut pas faire visiter",
         grave: true,
     },
     {
         id: 'ts-2',
-        label: 'On me demande un acompte ou un virement avant la visite',
+        label: "On me demande un acompte ou un virement avant la visite",
         grave: true,
     },
     {
         id: 'ts-3',
-        label: 'Le prix est anormalement bas pour le modèle et le kilométrage',
+        label: "Le prix est anormalement bas pour le modèle et le kilométrage",
         grave: true,
     },
     {
         id: 'ts-4',
-        label: 'L'annonce est floue, sans photos, ou avec des photos génériques',
+        label: "L'annonce est floue, sans photos, ou avec des photos génériques",
         grave: true,
     },
     {
         id: 'ts-5',
-        label: 'Le vendeur insiste pour conclure rapidement',
+        label: "Le vendeur insiste pour conclure rapidement",
         grave: false,
     },
     {
         id: 'ts-6',
-        label: 'Le kilométrage semble très bas pour l'âge du véhicule',
+        label: "Le kilométrage semble très bas pour l'âge du véhicule",
         grave: false,
     },
     {
         id: 'ts-7',
-        label: 'Plusieurs annonces identiques avec des numéros de contact différents',
+        label: "Plusieurs annonces identiques avec des numéros de contact différents",
         grave: false,
     },
     {
         id: 'ts-8',
-        label: 'La description contient des formules de type "vendu en l'état", "sans garantie"',
+        label: `La description contient des formules de type "vendu en l'état", "sans garantie"`,
         grave: false,
     },
     {
         id: 'ts-9',
-        label: 'Le vendeur refuse de fournir le numéro de plaque ou le VIN à l'avance',
+        label: "Le vendeur refuse de fournir le numéro de plaque ou le VIN à l'avance",
         grave: false,
     },
 ];
@@ -159,25 +159,25 @@ function updateTestVerdict() {
     if (total === 0) {
         level      = 'neutral';
         levelLabel = 'Résultat';
-        message    = 'Cochez les signaux présents dans l'annonce pour évaluer son niveau de risque.';
+        message    = "Cochez les signaux présents dans l'annonce pour évaluer son niveau de risque.";
     } else if (graveCount >= 1) {
         level      = 'danger';
         levelLabel = 'Signal rouge — Risque élevé';
         message    = graveCount === 1
-            ? 'L'un des signaux cochés est un signal grave. Ces situations correspondent souvent à des tentatives d'escroquerie. Ne versez aucun acompte et soyez très prudent avant de vous déplacer.'
+            ? "L'un des signaux cochés est un signal grave. Ces situations correspondent souvent à des tentatives d'escroquerie. Ne versez aucun acompte et soyez très prudent avant de vous déplacer."
             : `${graveCount} signaux graves sont présents. Cette annonce présente de forts indices d'arnaque. Il est fortement déconseillé de donner suite sans vérifications approfondies.`;
     } else if (total >= 3) {
         level      = 'caution';
         levelLabel = 'Vigilance accrue';
-        message    = 'Plusieurs signaux de vigilance sont réunis. L'annonce n'est pas forcément frauduleuse, mais mérite des vérifications sérieuses avant tout déplacement.';
+        message    = "Plusieurs signaux de vigilance sont réunis. L'annonce n'est pas forcément frauduleuse, mais mérite des vérifications sérieuses avant tout déplacement.";
     } else if (total >= 1) {
         level      = 'watch';
         levelLabel = 'Point à surveiller';
-        message    = 'Un ou deux signaux sont présents. Renseignez-vous davantage sur les points cochés avant de vous déplacer.';
+        message    = "Un ou deux signaux sont présents. Renseignez-vous davantage sur les points cochés avant de vous déplacer.";
     } else {
         level      = 'ok';
         levelLabel = 'Aucun signal détecté';
-        message    = 'Aucun signal d'alerte n'a été détecté dans cette annonce. Cela ne garantit pas la fiabilité du vendeur, mais c'est un bon point de départ.';
+        message    = "Aucun signal d'alerte n'a été détecté dans cette annonce. Cela ne garantit pas la fiabilité du vendeur, mais c'est un bon point de départ.";
     }
 
     verdictEl.setAttribute('data-level', level);
