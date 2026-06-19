@@ -1,0 +1,882 @@
+/* ============================================================
+   VERIDRIVE — SYSTÈME DE DESIGN
+   Feuille de styles principale
+   Design : épuré premium, ambiance confiance et sécurité
+   ============================================================ */
+
+
+/* ============================================================
+   1. VARIABLES — Le cœur du système de design
+      Toutes les décisions visuelles centralisées ici
+   ============================================================ */
+
+:root {
+
+    /* ── Couleurs principales ───────────────────────────── */
+
+    /* Bleu marine profond — confiance, sérieux, profondeur */
+    --color-navy:        #0D2545;
+    --color-navy-mid:    #1B3D6F;
+    --color-navy-light:  #2E5490;
+    --color-navy-pale:   rgba(13, 37, 69, 0.06);
+
+    /* Or discret — touche premium, sans ostentation */
+    --color-gold:        #B8882E;
+    --color-gold-light:  #CFA04A;
+    --color-gold-pale:   rgba(184, 136, 46, 0.08);
+
+    /* Vert succès — validation, confiance confirmée */
+    --color-success:     #2A7A4A;
+    --color-success-pale: rgba(42, 122, 74, 0.08);
+
+    /* Rouge critique — points rédhibitoires */
+    --color-critical:        #C0392B;
+    --color-critical-mid:    #E74C3C;
+    --color-critical-pale:   rgba(192, 57, 43, 0.06);
+    --color-critical-border: rgba(192, 57, 43, 0.22);
+
+    /* ── Couleurs de fond ───────────────────────────────── */
+
+    /* Blanc cassé chaud — doux, non clinique, rassurant */
+    --bg-base:           #F8F7F3;
+    --bg-subtle:         #F0EEE8;
+    --bg-card:           #FFFFFF;
+
+    /* ── Texte ──────────────────────────────────────────── */
+
+    --text-dark:         #111827;   /* Quasi-noir — titres */
+    --text-body:         #374151;   /* Gris foncé — corps de texte */
+    --text-muted:        #6B7280;   /* Gris moyen — textes secondaires */
+    --text-light:        #9CA3AF;   /* Gris clair — textes tertiaires */
+    --white:             #FFFFFF;
+
+    /* ── Bordures ───────────────────────────────────────── */
+
+    --border-subtle:     #EDECEA;
+    --border-light:      #E2E0D8;
+    --border:            #D0CEC4;
+
+    /* ── Typographie ────────────────────────────────────── */
+
+    /* Serif élégant pour les titres — editorial, premium */
+    --font-display:      'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+
+    /* Sans-serif moderne pour le corps — lisibilité maximale */
+    --font-body:         'DM Sans', system-ui, -apple-system, sans-serif;
+
+    /* ── Échelle de tailles de texte (rem) ──────────────── */
+
+    --text-xs:           0.75rem;    /* 12px */
+    --text-sm:           0.875rem;   /* 14px */
+    --text-base:         1rem;       /* 16px */
+    --text-lg:           1.125rem;   /* 18px */
+    --text-xl:           1.25rem;    /* 20px */
+    --text-2xl:          1.5rem;     /* 24px */
+    --text-3xl:          1.875rem;   /* 30px */
+    --text-4xl:          2.25rem;    /* 36px */
+    --text-5xl:          3rem;       /* 48px */
+    --text-6xl:          3.75rem;    /* 60px */
+    --text-7xl:          4.5rem;     /* 72px */
+
+    /* ── Hauteurs de ligne ──────────────────────────────── */
+
+    --leading-tight:     1.1;
+    --leading-snug:      1.25;
+    --leading-normal:    1.5;
+    --leading-relaxed:   1.65;
+
+    /* ── Espacements (échelle 4px) ──────────────────────── */
+
+    --space-1:           0.25rem;    /* 4px */
+    --space-2:           0.5rem;     /* 8px */
+    --space-3:           0.75rem;    /* 12px */
+    --space-4:           1rem;       /* 16px */
+    --space-5:           1.25rem;    /* 20px */
+    --space-6:           1.5rem;     /* 24px */
+    --space-8:           2rem;       /* 32px */
+    --space-10:          2.5rem;     /* 40px */
+    --space-12:          3rem;       /* 48px */
+    --space-16:          4rem;       /* 64px */
+    --space-20:          5rem;       /* 80px */
+    --space-24:          6rem;       /* 96px */
+    --space-32:          8rem;       /* 128px */
+
+    /* ── Rayons de bordure ──────────────────────────────── */
+
+    --radius-sm:         0.25rem;    /* 4px  — éléments très petits */
+    --radius:            0.5rem;     /* 8px  — éléments standard */
+    --radius-md:         0.75rem;    /* 12px — boutons, tags */
+    --radius-lg:         1rem;       /* 16px — cartes petites */
+    --radius-xl:         1.5rem;     /* 24px — cartes grandes */
+    --radius-2xl:        2rem;       /* 32px — sections */
+    --radius-full:       9999px;     /* Pilule */
+
+    /* ── Ombres ─────────────────────────────────────────── */
+
+    --shadow-xs:         0 1px 2px  rgba(13, 37, 69, 0.05);
+    --shadow-sm:         0 2px 6px  rgba(13, 37, 69, 0.07);
+    --shadow:            0 4px 14px rgba(13, 37, 69, 0.09);
+    --shadow-md:         0 8px 24px rgba(13, 37, 69, 0.11);
+    --shadow-lg:         0 16px 40px rgba(13, 37, 69, 0.13);
+    --shadow-xl:         0 24px 56px rgba(13, 37, 69, 0.16);
+    --shadow-gold:       0 4px 20px rgba(184, 136, 46, 0.3);
+
+    /* ── Transitions ────────────────────────────────────── */
+
+    --ease-out:          cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-spring:       cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --transition-fast:   150ms var(--ease-out);
+    --transition:        250ms var(--ease-out);
+    --transition-slow:   400ms var(--ease-out);
+
+    /* ── Z-index ────────────────────────────────────────── */
+
+    --z-below:           -1;
+    --z-base:            0;
+    --z-above:           10;
+    --z-header:          100;
+
+    /* ── Layout ─────────────────────────────────────────── */
+
+    --container-max:     1200px;
+    --container-pad:     var(--space-6);
+    --header-height:     72px;
+}
+
+
+/* ============================================================
+   2. RESET & BASE
+   ============================================================ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--text-body);
+    background-color: var(--bg-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* Accessibilité : focus visible sur éléments interactifs */
+:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+}
+
+
+/* ============================================================
+   3. LAYOUT — Conteneurs
+   ============================================================ */
+
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-pad);
+    padding-right: var(--container-pad);
+}
+
+
+/* ============================================================
+   4. COMPOSANTS — Boutons
+   ============================================================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-4) var(--space-8);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    border-radius: var(--radius-full);
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color var(--transition),
+                border-color var(--transition),
+                color var(--transition),
+                transform var(--transition),
+                box-shadow var(--transition);
+}
+
+/* Bouton principal — marine plein */
+.btn--primary {
+    background-color: var(--color-navy);
+    color: var(--white);
+    border-color: var(--color-navy);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-navy-mid);
+    border-color: var(--color-navy-mid);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn--primary:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Bouton secondaire — contour marine */
+.btn--secondary {
+    background-color: transparent;
+    color: var(--color-navy);
+    border-color: var(--color-navy);
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-navy);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Bouton fantôme — contour léger discret */
+.btn--ghost {
+    background-color: transparent;
+    color: var(--text-body);
+    border-color: var(--border);
+}
+
+.btn--ghost:hover {
+    border-color: var(--color-navy);
+    color: var(--color-navy);
+    transform: translateY(-2px);
+}
+
+/* Bouton or — accent premium */
+.btn--gold {
+    background-color: var(--color-gold);
+    color: var(--white);
+    border-color: var(--color-gold);
+}
+
+.btn--gold:hover {
+    background-color: var(--color-gold-light);
+    border-color: var(--color-gold-light);
+    box-shadow: var(--shadow-gold);
+    transform: translateY(-2px);
+}
+
+/* Modificateurs de taille */
+.btn--sm {
+    padding: var(--space-2) var(--space-5);
+    font-size: var(--text-sm);
+}
+
+.btn--lg {
+    padding: var(--space-5) var(--space-10);
+    font-size: var(--text-lg);
+}
+
+
+/* ============================================================
+   5. COMPOSANTS — Cartes
+   ============================================================ */
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+/* Variante plate — sans ombre */
+.card--flat {
+    box-shadow: none;
+}
+
+/* Variante avec bordure marquée */
+.card--bordered {
+    border-color: var(--border);
+}
+
+/* Variante marine — fond sombre */
+.card--dark {
+    background-color: var(--color-navy);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+}
+
+
+/* ============================================================
+   6. COMPOSANTS — Badge
+   ============================================================ */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--color-navy-pale);
+    border: 1px solid rgba(13, 37, 69, 0.1);
+    border-radius: var(--radius-full);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-navy);
+    letter-spacing: 0.01em;
+}
+
+/* Pastille animée — indique "actif" ou "live" */
+.badge__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-gold);
+    flex-shrink: 0;
+    animation: pulse-dot 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1;   transform: scale(1); }
+    50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* Variante or */
+.badge--gold {
+    background-color: var(--color-gold-pale);
+    border-color: rgba(184, 136, 46, 0.2);
+    color: var(--color-gold);
+}
+
+/* Variante succès */
+.badge--success {
+    background-color: var(--color-success-pale);
+    border-color: rgba(42, 122, 74, 0.2);
+    color: var(--color-success);
+}
+
+
+/* ============================================================
+   7. HEADER
+   ============================================================ */
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-header);
+    height: var(--header-height);
+
+    /* Glassmorphism subtil */
+    background-color: rgba(248, 247, 243, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+/* Etat au scroll — ajouté dynamiquement par JS */
+.header.is-scrolled {
+    border-bottom-color: var(--border-subtle);
+    box-shadow: var(--shadow-xs);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+}
+
+/* Logo */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    text-decoration: none;
+    transition: opacity var(--transition-fast);
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo__mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo__wordmark {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-navy);
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+/* Liens de navigation */
+.nav__links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.nav__link {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-muted);
+    border-radius: var(--radius-md);
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    color: var(--color-navy);
+    background-color: var(--color-navy-pale);
+}
+
+/* Lien actif — page courante */
+.nav__link.is-active {
+    color: var(--color-navy);
+    background-color: var(--color-navy-pale);
+    font-weight: 500;
+}
+
+/* Pilule "Bientôt disponible" */
+.nav__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-1) var(--space-3);
+    background-color: rgba(184, 136, 46, 0.08);
+    border: 1px solid rgba(184, 136, 46, 0.2);
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    color: var(--color-gold);
+    letter-spacing: 0.03em;
+}
+
+.nav__pill-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: var(--radius-full);
+    background-color: currentColor;
+    animation: pulse-dot 2.5s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+
+/* ============================================================
+   8. SECTION HERO
+   ============================================================ */
+
+.hero {
+    position: relative;
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+    padding-top: var(--space-20);
+    padding-bottom: var(--space-24);
+    overflow: hidden;
+}
+
+/* Mise en page : colonne unique sur mobile, deux colonnes sur desktop */
+.hero__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: var(--space-16);
+    width: 100%;
+}
+
+/* ── Bloc textuel ── */
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    max-width: 600px;
+}
+
+.hero__eyebrow {
+    display: flex;
+}
+
+/* Titre principal — Cormorant Garamond, grande taille fluide */
+.hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-4xl), 5.5vw, var(--text-7xl));
+    font-weight: 600;
+    line-height: var(--leading-tight);
+    color: var(--text-dark);
+    letter-spacing: -0.025em;
+}
+
+/* Accent "en toute confiance" — italique, marine, souligné or */
+.hero__title-accent {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-navy-mid);
+    position: relative;
+    padding-bottom: 6px;
+}
+
+/* Soulignement dégradé or → transparent */
+.hero__title-accent::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-gold) 0%, transparent 100%);
+    border-radius: 1px;
+}
+
+/* Sous-titre — taille fluide, bonne lisibilité */
+.hero__subtitle {
+    font-size: clamp(var(--text-base), 1.5vw, var(--text-xl));
+    line-height: var(--leading-relaxed);
+    color: var(--text-body);
+    max-width: 500px;
+}
+
+/* Groupe de boutons CTA */
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+/* Indicateurs de confiance — sous les CTA */
+.hero__trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-6);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--border-subtle);
+}
+
+.trust-item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.trust-item__icon {
+    flex-shrink: 0;
+}
+
+/* ── Bloc visuel (emblème) ── */
+
+.hero__visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    max-width: 400px;
+    margin: 0 auto;
+    /* Masqué sur mobile — affiché sur desktop via media query */
+    display: none;
+}
+
+/* Respiration lente de l'emblème */
+.hero__emblem {
+    width: 100%;
+    max-width: 380px;
+    animation: emblem-breathe 7s ease-in-out infinite;
+}
+
+@keyframes emblem-breathe {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50%       { transform: scale(1.015) rotate(0.4deg); }
+}
+
+/* Cartes flottantes superposées à l'emblème */
+.float-card {
+    position: absolute;
+    z-index: var(--z-above);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    white-space: nowrap;
+}
+
+.float-card--top {
+    top: 5%;
+    left: -5%;
+    animation: float-up 4.5s ease-in-out infinite;
+}
+
+.float-card--bottom {
+    bottom: 5%;
+    right: -5%;
+    animation: float-down 4.5s ease-in-out infinite 0.6s;
+}
+
+@keyframes float-up {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-10px); }
+}
+
+@keyframes float-down {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(10px); }
+}
+
+.float-card__icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-gold-pale);
+    border-radius: var(--radius);
+    flex-shrink: 0;
+}
+
+.float-card__icon--success {
+    background-color: var(--color-success-pale);
+}
+
+.float-card__label {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: 0.01em;
+}
+
+.float-card__value {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    margin-top: 1px;
+}
+
+/* Halo de fond dégradé radial */
+.hero__bg-halo {
+    position: absolute;
+    top: -30%;
+    right: -15%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(184, 136, 46, 0.05) 0%,
+        rgba(13, 37, 69, 0.03) 45%,
+        transparent 70%
+    );
+    border-radius: var(--radius-full);
+    pointer-events: none;
+    z-index: var(--z-below);
+}
+
+
+/* ============================================================
+   9. FOOTER
+   ============================================================ */
+
+.footer {
+    background-color: var(--bg-subtle);
+    border-top: 1px solid var(--border-subtle);
+    padding: var(--space-12) 0;
+}
+
+.footer__layout {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    align-items: flex-start;
+}
+
+.footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.footer__tagline {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    max-width: 280px;
+    line-height: var(--leading-relaxed);
+}
+
+.footer__legal {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.footer__copyright {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+.footer__links {
+    display: flex;
+    gap: var(--space-5);
+}
+
+.footer__links a {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    transition: color var(--transition-fast);
+}
+
+.footer__links a:hover {
+    color: var(--color-navy);
+}
+
+
+/* ============================================================
+   10. ANIMATIONS D'ENTRÉE AU SCROLL
+   ============================================================ */
+
+/* État initial : invisible + légèrement décalé vers le bas */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity  0.65s var(--ease-out),
+                transform 0.65s var(--ease-out);
+}
+
+/* État visible : déclenché par JS via IntersectionObserver */
+[data-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ============================================================
+   11. RESPONSIVE — Tablette (≥ 640px)
+   ============================================================ */
+
+@media (min-width: 640px) {
+
+    .footer__layout {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .footer__legal {
+        align-items: flex-end;
+        text-align: right;
+    }
+}
+
+
+/* ============================================================
+   12. RESPONSIVE — Desktop (≥ 900px)
+   ============================================================ */
+
+@media (min-width: 900px) {
+
+    /* Hero : deux colonnes */
+    .hero__layout {
+        grid-template-columns: 1fr 400px;
+        gap: var(--space-10);
+    }
+
+    /* Afficher le bloc visuel sur desktop */
+    .hero__visual {
+        display: flex;
+    }
+}
+
+
+/* ============================================================
+   13. RESPONSIVE — Mobile (≤ 480px)
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    :root {
+        --container-pad: var(--space-5);
+    }
+
+    /* Boutons en pleine largeur sur petit écran */
+    .hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+    }
+
+    /* Indicateurs de confiance en colonne */
+    .hero__trust {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    /* Réduire le padding du hero */
+    .hero {
+        padding-top: var(--space-12);
+        padding-bottom: var(--space-16);
+        min-height: auto;
+    }
+}

@@ -1,0 +1,671 @@
+/* ============================================================
+   VERIDRIVE — CHECKLIST D'ACHAT
+   Styles spécifiques à la page checklist.html
+   Complète css/style.css sans le remplacer
+   ============================================================ */
+
+
+/* ============================================================
+   1. HERO COMPACT — En-tête de page
+   ============================================================ */
+
+.page-hero {
+    padding: var(--space-16) 0 var(--space-12);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.page-hero__eyebrow {
+    display: flex;
+    margin-bottom: var(--space-5);
+}
+
+.page-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-3xl), 4vw, var(--text-6xl));
+    font-weight: 600;
+    line-height: var(--leading-tight);
+    color: var(--text-dark);
+    letter-spacing: -0.025em;
+    margin-bottom: var(--space-5);
+}
+
+.page-hero__subtitle {
+    font-size: clamp(var(--text-base), 1.5vw, var(--text-lg));
+    color: var(--text-muted);
+    max-width: 600px;
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-6);
+}
+
+/* Méta-infos : nombre d'étapes, durée estimée */
+.page-hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+}
+
+.meta-stat {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+.meta-stat strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   2. BARRE DE PROGRESSION — Sticky sous le header
+   ============================================================ */
+
+.progress-sticky {
+    position: sticky;
+    top: var(--header-height);
+    z-index: calc(var(--z-header) - 1);
+    background-color: rgba(248, 247, 243, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: var(--space-3) 0;
+    transition: box-shadow var(--transition);
+}
+
+.progress-sticky.has-shadow {
+    box-shadow: var(--shadow-sm);
+}
+
+.progress-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+/* Barre de progression visuelle */
+.progress-track {
+    flex: 1;
+    height: 5px;
+    background-color: var(--border-light);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: var(--radius-full);
+    background: linear-gradient(90deg, var(--color-navy), var(--color-gold));
+    transition: width 0.4s var(--ease-out);
+}
+
+/* Label du score */
+.progress-label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-muted);
+    white-space: nowrap;
+    min-width: 120px;
+    text-align: right;
+}
+
+.progress-label strong {
+    color: var(--color-navy);
+}
+
+/* Indicateurs par étape (6 points) */
+.progress-steps {
+    display: flex;
+    gap: var(--space-1);
+}
+
+.progress-step-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    background-color: var(--border);
+    transition: background-color var(--transition);
+    cursor: default;
+}
+
+.progress-step-dot.is-complete {
+    background-color: var(--color-gold);
+}
+
+.progress-step-dot.is-partial {
+    background-color: var(--color-navy-light);
+}
+
+
+/* ============================================================
+   3. LAYOUT — Corps de la page checklist
+   ============================================================ */
+
+.checklist-body {
+    padding: var(--space-12) 0 var(--space-24);
+}
+
+.checklist-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+
+/* ============================================================
+   4. SECTION D'ÉTAPE
+   ============================================================ */
+
+.step-section {
+    scroll-margin-top: calc(var(--header-height) + 60px);
+}
+
+/* En-tête d'étape */
+.step-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-5);
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-6);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Numéro de l'étape */
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    background-color: var(--color-navy-pale);
+    border: 1px solid rgba(13, 37, 69, 0.1);
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--color-navy);
+    flex-shrink: 0;
+    transition: background-color var(--transition), border-color var(--transition);
+}
+
+/* Numéro mis en valeur quand l'étape est complète */
+.step-section.is-complete .step-number {
+    background-color: rgba(42, 122, 74, 0.1);
+    border-color: rgba(42, 122, 74, 0.25);
+    color: var(--color-success);
+}
+
+.step-header__content {
+    flex: 1;
+}
+
+.step-title {
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-2xl), 2.5vw, var(--text-3xl));
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: -0.02em;
+    line-height: var(--leading-snug);
+    margin-bottom: var(--space-1);
+}
+
+/* Compteur de points de l'étape */
+.step-counter {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+.step-counter strong {
+    color: var(--color-navy);
+}
+
+/* Coche d'étape complète */
+.step-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-success);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity var(--transition), transform var(--transition-spring);
+    flex-shrink: 0;
+    margin-top: 8px;
+}
+
+.step-section.is-complete .step-check {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* ============================================================
+   5. ITEMS DE CHECKLIST
+   ============================================================ */
+
+.check-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-bottom: var(--space-8);
+}
+
+/* Conteneur d'un item */
+.check-item {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    background-color: var(--bg-card);
+    overflow: hidden;
+    transition: border-color var(--transition), box-shadow var(--transition), background-color var(--transition);
+}
+
+.check-item:hover {
+    border-color: var(--border);
+    box-shadow: var(--shadow-xs);
+}
+
+/* Item coché — fond légèrement teinté */
+.check-item.is-checked {
+    border-color: rgba(13, 37, 69, 0.12);
+    background-color: rgba(13, 37, 69, 0.015);
+}
+
+/* Item critique — bordure gauche rouge */
+.check-item--critical {
+    border-left: 3px solid var(--color-critical-border);
+    background-color: var(--color-critical-pale);
+}
+
+.check-item--critical:hover {
+    border-left-color: var(--color-critical);
+    box-shadow: var(--shadow-xs);
+}
+
+/* Item critique coché — la teinte critique disparaît */
+.check-item--critical.is-checked {
+    border-left-color: rgba(42, 122, 74, 0.4);
+    background-color: rgba(42, 122, 74, 0.03);
+}
+
+/* Ligne de la case à cocher + label */
+.check-item__label-row {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Input natif caché — remplacé par le visuel custom */
+.check-item__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+/* Case à cocher custom */
+.check-item__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius);
+    border: 2px solid var(--border);
+    background-color: var(--white);
+    flex-shrink: 0;
+    margin-top: 1px;
+    transition: background-color var(--transition-fast),
+                border-color var(--transition-fast),
+                transform var(--transition-spring);
+}
+
+/* État hover sur la ligne */
+.check-item__label-row:hover .check-item__box {
+    border-color: var(--color-navy);
+}
+
+/* Case cochée */
+.check-item.is-checked .check-item__box {
+    background-color: var(--color-navy);
+    border-color: var(--color-navy);
+    transform: scale(1.05);
+}
+
+.check-item__box svg {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity var(--transition-fast), transform var(--transition-spring);
+}
+
+.check-item.is-checked .check-item__box svg {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Contenu textuel du label */
+.check-item__content {
+    flex: 1;
+    min-width: 0;
+}
+
+.check-item__text {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--text-dark);
+    line-height: var(--leading-snug);
+    transition: color var(--transition-fast);
+}
+
+/* Texte barré quand coché */
+.check-item.is-checked .check-item__text {
+    color: var(--text-muted);
+    text-decoration: line-through;
+    text-decoration-color: var(--text-light);
+}
+
+/* Badge "Critique" */
+.badge-critical {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: 2px var(--space-2);
+    background-color: var(--color-critical-pale);
+    border: 1px solid var(--color-critical-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-critical);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-decoration: none; /* annule le barré si coché */
+}
+
+/* Le badge reste lisible même si le texte est barré */
+.check-item.is-checked .badge-critical {
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+/* Zone de détail dépliable */
+.check-item__detail {
+    border-top: 1px solid var(--border-subtle);
+}
+
+.check-item__detail summary {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    list-style: none;
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.check-item__detail summary::-webkit-details-marker { display: none; }
+.check-item__detail summary::marker { display: none; }
+
+.check-item__detail summary:hover {
+    color: var(--color-navy);
+    background-color: var(--color-navy-pale);
+}
+
+/* Flèche de déploiement */
+.detail-arrow {
+    flex-shrink: 0;
+    transition: transform var(--transition);
+}
+
+.check-item__detail[open] .detail-arrow {
+    transform: rotate(90deg);
+}
+
+/* Texte de l'explication */
+.check-item__explanation {
+    padding: var(--space-1) var(--space-5) var(--space-5);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--text-body);
+    border-top: 1px solid var(--border-subtle);
+}
+
+
+/* ============================================================
+   6. ENCART ASTUCE
+   ============================================================ */
+
+.tip-card {
+    display: flex;
+    gap: var(--space-4);
+    padding: var(--space-5) var(--space-6);
+    background-color: rgba(184, 136, 46, 0.05);
+    border: 1px solid rgba(184, 136, 46, 0.18);
+    border-radius: var(--radius-lg);
+    border-left: 3px solid var(--color-gold);
+}
+
+.tip-card__icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.tip-card__title {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: var(--space-2);
+}
+
+.tip-card__text {
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--text-body);
+}
+
+
+/* ============================================================
+   7. SECTION VERDICT FINAL
+   ============================================================ */
+
+.verdict-section {
+    margin-top: var(--space-8);
+    padding: var(--space-10) var(--space-10);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    background-color: var(--bg-card);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: border-color var(--transition), background-color var(--transition);
+}
+
+/* Cercle de score */
+.verdict-gauge-wrap {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto var(--space-6);
+}
+
+.verdict-gauge-svg {
+    width: 120px;
+    height: 120px;
+    transform: rotate(-90deg);
+}
+
+.gauge-track {
+    fill: none;
+    stroke: var(--border-light);
+    stroke-width: 7;
+}
+
+.gauge-fill {
+    fill: none;
+    stroke: var(--color-navy);
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-dasharray: 314; /* 2π × 50 */
+    stroke-dashoffset: 314;
+    transition: stroke-dashoffset 0.7s var(--ease-out), stroke 0.4s var(--ease-out);
+}
+
+.verdict-score-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.verdict-score-number {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1;
+}
+
+.verdict-score-unit {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+/* Titre et message */
+.verdict-title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--space-3);
+}
+
+.verdict-message {
+    font-size: var(--text-base);
+    color: var(--text-muted);
+    max-width: 480px;
+    margin: 0 auto var(--space-6);
+    line-height: var(--leading-relaxed);
+}
+
+/* Liste des points critiques non cochés */
+.verdict-critical-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-4) var(--space-5);
+    background-color: var(--color-critical-pale);
+    border: 1px solid var(--color-critical-border);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-6);
+    text-align: left;
+}
+
+.verdict-critical-label {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--color-critical);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-1);
+}
+
+.verdict-critical-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--text-body);
+    line-height: var(--leading-snug);
+}
+
+.verdict-critical-item::before {
+    content: '·';
+    color: var(--color-critical);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* Variantes de verdict par niveau */
+.verdict-section[data-level="excellent"] { border-color: rgba(42, 122, 74, 0.3); background-color: rgba(42, 122, 74, 0.02); }
+.verdict-section[data-level="excellent"] .gauge-fill { stroke: var(--color-success); }
+.verdict-section[data-level="excellent"] .verdict-title { color: var(--color-success); }
+
+.verdict-section[data-level="good"] { border-color: rgba(13, 37, 69, 0.2); }
+.verdict-section[data-level="good"] .gauge-fill { stroke: var(--color-navy); }
+
+.verdict-section[data-level="average"] { border-color: rgba(184, 136, 46, 0.35); background-color: rgba(184, 136, 46, 0.02); }
+.verdict-section[data-level="average"] .gauge-fill { stroke: var(--color-gold); }
+.verdict-section[data-level="average"] .verdict-title { color: var(--color-gold); }
+
+.verdict-section[data-level="critical"] { border-color: var(--color-critical-border); background-color: var(--color-critical-pale); }
+.verdict-section[data-level="critical"] .gauge-fill { stroke: var(--color-critical); }
+.verdict-section[data-level="critical"] .verdict-title { color: var(--color-critical); }
+
+
+/* ============================================================
+   8. RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+    .progress-steps {
+        display: none;
+    }
+
+    .step-header {
+        gap: var(--space-4);
+    }
+
+    .check-item__label-row {
+        padding: var(--space-4);
+    }
+
+    .check-item__explanation {
+        padding: var(--space-1) var(--space-4) var(--space-4);
+    }
+
+    .verdict-section {
+        padding: var(--space-8) var(--space-6);
+    }
+
+    .tip-card {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero {
+        padding: var(--space-10) 0 var(--space-8);
+    }
+
+    .check-item__text {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-1);
+    }
+}

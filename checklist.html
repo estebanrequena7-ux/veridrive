@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist d'achat — Veridrive</title>
+    <meta name="description" content="Checklist complète pour acheter une voiture d'occasion en toute confiance : 6 étapes, 36 points de contrôle, points critiques identifiés.">
+
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+    <!-- Design system global + styles de la page -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checklist.css">
+</head>
+<body>
+
+    <!-- ===================================================
+         HEADER — Identique à index.html
+    ==================================================== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navigation principale">
+
+                <a href="index.html" class="logo" aria-label="Veridrive — Retour à l'accueil">
+                    <div class="logo__mark" aria-hidden="true">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M3 5L15 24L27 5" stroke="var(--color-navy)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 5L15 15L21 5" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="logo__wordmark">Veridrive</span>
+                </a>
+
+                <!-- Liens de navigation -->
+                <div class="nav__links">
+                    <a href="checklist.html" class="nav__link">Checklist</a>
+                </div>
+
+                <!-- Indicateur de lancement -->
+                <div class="nav__pill" role="status" aria-label="Statut du service">
+                    <span class="nav__pill-dot" aria-hidden="true"></span>
+                    <span>Bientôt disponible</span>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- ===================================================
+         CONTENU PRINCIPAL
+    ==================================================== -->
+    <main>
+
+        <!-- ===============================================
+             HERO COMPACT — Présentation de la page
+        ================================================ -->
+        <div class="page-hero">
+            <div class="container">
+
+                <div class="page-hero__eyebrow">
+                    <span class="badge">
+                        <span class="badge__dot" aria-hidden="true"></span>
+                        Guide d'inspection
+                    </span>
+                </div>
+
+                <h1 class="page-hero__title">
+                    Checklist d'achat<br>
+                    <em style="font-style: italic; font-weight: 400; color: var(--color-navy-mid);">voiture d'occasion</em>
+                </h1>
+
+                <p class="page-hero__subtitle">
+                    Suivez ce parcours en 6 étapes lors de votre inspection. Chaque point est expliqué simplement, les points critiques sont clairement identifiés.
+                </p>
+
+                <!-- Méta-infos -->
+                <div class="page-hero__meta">
+                    <div class="meta-stat">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <rect x="2" y="2" width="12" height="12" rx="2" stroke="var(--color-gold)" stroke-width="1.5"/>
+                            <path d="M5 8L7 10L11 6" stroke="var(--color-gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span><strong>36 points</strong> de contrôle</span>
+                    </div>
+                    <div class="meta-stat">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M8 1.5C4.41 1.5 1.5 4.41 1.5 8S4.41 14.5 8 14.5 14.5 11.59 14.5 8 11.59 1.5 8 1.5Z" stroke="var(--text-muted)" stroke-width="1.25"/>
+                            <path d="M8 5V8.5L10.5 10" stroke="var(--text-muted)" stroke-width="1.25" stroke-linecap="round"/>
+                        </svg>
+                        <span><strong>45 à 90 min</strong> d'inspection recommandée</span>
+                    </div>
+                    <div class="meta-stat">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="var(--color-critical)" stroke-width="1.25"/>
+                            <path d="M8 5.5V8.5M8 10.5V11" stroke="var(--color-critical)" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <span><strong>14 points critiques</strong> identifiés</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- ===============================================
+             BARRE DE PROGRESSION — Sticky
+        ================================================ -->
+        <div class="progress-sticky" id="progress-sticky" role="region" aria-label="Progression de l'inspection">
+            <div class="container">
+                <div class="progress-inner">
+
+                    <!-- Indicateurs par étape -->
+                    <div class="progress-steps" role="list" aria-label="Avancement par étape">
+                        <div class="progress-step-dot" id="dot-step-1" role="listitem" title="Étape 1 : Avant de se déplacer"></div>
+                        <div class="progress-step-dot" id="dot-step-2" role="listitem" title="Étape 2 : L'extérieur"></div>
+                        <div class="progress-step-dot" id="dot-step-3" role="listitem" title="Étape 3 : L'intérieur"></div>
+                        <div class="progress-step-dot" id="dot-step-4" role="listitem" title="Étape 4 : Le moteur"></div>
+                        <div class="progress-step-dot" id="dot-step-5" role="listitem" title="Étape 5 : L'essai routier"></div>
+                        <div class="progress-step-dot" id="dot-step-6" role="listitem" title="Étape 6 : Les papiers"></div>
+                    </div>
+
+                    <!-- Barre de progression -->
+                    <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progression globale">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+
+                    <!-- Label -->
+                    <div class="progress-label" id="progress-label" aria-live="polite">
+                        <strong>0</strong> / 36 points vérifiés
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ===============================================
+             CORPS DE LA CHECKLIST — Rempli par JS
+        ================================================ -->
+        <div class="checklist-body">
+            <div class="container">
+                <div class="checklist-layout">
+
+                    <!-- Les 6 sections d'étapes sont générées par checklist.js -->
+                    <div id="checklist-container">
+                        <!-- Contenu injecté par JavaScript -->
+                        <noscript>
+                            <p style="padding: 2rem; text-align: center; color: var(--text-muted);">
+                                Cette page nécessite JavaScript pour afficher la checklist interactive.
+                            </p>
+                        </noscript>
+                    </div>
+
+
+                    <!-- =========================================
+                         VERDICT FINAL — Mis à jour en temps réel
+                    ========================================== -->
+                    <section
+                        class="verdict-section"
+                        id="verdict"
+                        data-level="neutral"
+                        aria-live="polite"
+                        aria-label="Verdict de l'inspection"
+                    >
+
+                        <!-- Jauge circulaire SVG -->
+                        <div class="verdict-gauge-wrap">
+                            <svg class="verdict-gauge-svg" viewBox="0 0 120 120" aria-hidden="true">
+                                <circle class="gauge-track" cx="60" cy="60" r="50"/>
+                                <circle class="gauge-fill" id="gauge-fill" cx="60" cy="60" r="50"/>
+                            </svg>
+                            <div class="verdict-score-text">
+                                <span class="verdict-score-number" id="verdict-score-number">0%</span>
+                                <span class="verdict-score-unit">score</span>
+                            </div>
+                        </div>
+
+                        <!-- Titre et message -->
+                        <h2 class="verdict-title" id="verdict-title">
+                            Votre verdict apparaîtra ici
+                        </h2>
+                        <p class="verdict-message" id="verdict-message">
+                            Commencez à cocher les points au fur et à mesure de votre inspection. Le verdict se met à jour en temps réel.
+                        </p>
+
+                        <!-- Points critiques non cochés (masqués par défaut) -->
+                        <div class="verdict-critical-list" id="verdict-critical-list" style="display: none;" role="alert"></div>
+
+                        <!-- Rappel légal -->
+                        <p style="font-size: var(--text-xs); color: var(--text-light); margin-top: var(--space-4); line-height: var(--leading-relaxed);">
+                            Ce verdict est indicatif. Un expert automobile indépendant ou un mécanicien de confiance reste la meilleure garantie avant un achat important.
+                        </p>
+
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- ===================================================
+         FOOTER — Identique à index.html
+    ==================================================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__layout">
+
+                <div class="footer__brand">
+                    <a href="index.html" class="logo" aria-label="Veridrive — Accueil">
+                        <div class="logo__mark" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 30 30" fill="none">
+                                <path d="M3 5L15 24L27 5" stroke="var(--color-navy)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 5L15 15L21 5" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span class="logo__wordmark">Veridrive</span>
+                    </a>
+                    <p class="footer__tagline">
+                        Votre compagnon auto indépendant pour acheter en toute confiance.
+                    </p>
+                </div>
+
+                <div class="footer__legal">
+                    <p class="footer__copyright">© 2026 Veridrive. Tous droits réservés.</p>
+                    <nav class="footer__links" aria-label="Liens légaux">
+                        <a href="#">Mentions légales</a>
+                        <a href="#">Confidentialité</a>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/checklist.js"></script>
+</body>
+</html>

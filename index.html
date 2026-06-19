@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veridrive — Achetez votre voiture d'occasion en toute confiance</title>
+    <meta name="description" content="Veridrive est votre compagnon auto indépendant. Analyses, guides et conseils pour acheter une voiture d'occasion sans se faire avoir.">
+
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===================================================
+         HEADER — Navigation principale
+         Sticky, avec effet glassmorphism au scroll
+    ==================================================== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navigation principale">
+
+                <!-- Logotype Veridrive -->
+                <a href="/" class="logo" aria-label="Veridrive — Retour à l'accueil">
+                    <div class="logo__mark" aria-hidden="true">
+                        <!-- Marque géométrique en V double — navy + or -->
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M3 5L15 24L27 5" stroke="var(--color-navy)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 5L15 15L21 5" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="logo__wordmark">Veridrive</span>
+                </a>
+
+                <!-- Liens de navigation -->
+                <div class="nav__links">
+                    <a href="checklist.html" class="nav__link">Checklist</a>
+                </div>
+
+                <!-- Indicateur de lancement -->
+                <div class="nav__pill" role="status" aria-label="Statut du service">
+                    <span class="nav__pill-dot" aria-hidden="true"></span>
+                    <span>Bientôt disponible</span>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- ===================================================
+         CONTENU PRINCIPAL
+    ==================================================== -->
+    <main>
+
+        <!-- ===============================================
+             SECTION HERO — Promesse principale
+             Pleine hauteur d'écran, deux colonnes sur desktop
+        ================================================ -->
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero__layout">
+
+                    <!-- Bloc textuel gauche -->
+                    <div class="hero__content">
+
+                        <!-- Étiquette d'accroche -->
+                        <div class="hero__eyebrow" data-animate>
+                            <span class="badge">
+                                <span class="badge__dot" aria-hidden="true"></span>
+                                Votre compagnon auto indépendant
+                            </span>
+                        </div>
+
+                        <!-- Titre principal -->
+                        <h1 class="hero__title" id="hero-title" data-animate>
+                            Achetez votre voiture d'occasion
+                            <em class="hero__title-accent">en toute confiance</em>
+                        </h1>
+
+                        <!-- Promesse -->
+                        <p class="hero__subtitle" data-animate>
+                            Veridrive analyse, explique et vous guide pas à pas — pour que vous fassiez le bon choix, sans jargon, sans pression, sans vous faire avoir.
+                        </p>
+
+                        <!-- Boutons d'action -->
+                        <div class="hero__actions" data-animate>
+                            <a href="#" class="btn btn--primary">
+                                Analyser une voiture
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                    <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="btn btn--ghost">
+                                Découvrir Veridrive
+                            </a>
+                        </div>
+
+                        <!-- Indicateurs de confiance -->
+                        <div class="hero__trust" data-animate>
+                            <div class="trust-item">
+                                <svg class="trust-item__icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                    <path d="M2 7L5.5 10.5L12 3" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Sans jargon technique</span>
+                            </div>
+                            <div class="trust-item">
+                                <svg class="trust-item__icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                    <path d="M2 7L5.5 10.5L12 3" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Adapté à tous les niveaux</span>
+                            </div>
+                            <div class="trust-item">
+                                <svg class="trust-item__icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                    <path d="M2 7L5.5 10.5L12 3" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>100% indépendant</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Bloc visuel droit — emblème géométrique -->
+                    <div class="hero__visual" aria-hidden="true" data-animate>
+
+                        <!-- SVG emblème central : cercles de précision + losange or + monogramme V -->
+                        <div class="hero__emblem">
+                            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Cercles concentriques extérieurs -->
+                                <circle cx="200" cy="200" r="185" stroke="#0D2545" stroke-opacity="0.04" stroke-width="1"/>
+                                <circle cx="200" cy="200" r="160" stroke="#0D2545" stroke-opacity="0.06" stroke-width="0.75"/>
+                                <circle cx="200" cy="200" r="136" stroke="#0D2545" stroke-opacity="0.08" stroke-width="0.75"/>
+
+                                <!-- Cercle principal de cadran -->
+                                <circle cx="200" cy="200" r="112" stroke="#0D2545" stroke-opacity="0.1" stroke-width="1.5"/>
+
+                                <!-- Graduations (style tachymètre) -->
+                                <g stroke="#0D2545" stroke-opacity="0.12" stroke-linecap="round">
+                                    <line x1="200" y1="78" x2="200" y2="96" stroke-width="1.5" transform="rotate(0 200 200)"/>
+                                    <line x1="200" y1="82" x2="200" y2="92" stroke-width="0.75" transform="rotate(15 200 200)"/>
+                                    <line x1="200" y1="82" x2="200" y2="92" stroke-width="0.75" transform="rotate(45 200 200)"/>
+                                    <line x1="200" y1="78" x2="200" y2="96" stroke-width="1.5" transform="rotate(30 200 200)"/>
+                                    <line x1="200" y1="82" x2="200" y2="92" stroke-width="0.75" transform="rotate(75 200 200)"/>
+                                    <line x1="200" y1="78" x2="200" y2="96" stroke-width="1.5" transform="rotate(60 200 200)"/>
+                                    <line x1="200" y1="82" x2="200" y2="92" stroke-width="0.75" transform="rotate(105 200 200)"/>
+                                    <line x1="200" y1="78" x2="200" y2="96" stroke-width="1.5" transform="rotate(90 200 200)"/>
+                                    <line x1="200" y1="82" x2="200" y2="92" stroke-width="0.75" transform="rotate(135 200 200)"/>
+                                    <line x1="200" y1="78" x2="200" y2="96" stroke-width="1.5" transform="rotate(120 200 200)"/>
+                                    <line x1="200" y1="82" x2="200" y2="92" stroke-width="0.75" transform="rotate(165 200 200)"/>
+                                    <line x1="200" y1="78" x2="200" y2="96" stroke-width="1.5" transform="rotate(150 200 200)"/>
+                                    <line x1="200" y1="82" x2="200" y2="92" stroke-width="0.75" transform="rotate(195 200 200)"/>
+                                    <line x1="200" y1="78" x2="200" y2="96" stroke-width="1.5" transform="rotate(180 200 200)"/>
+                                    <line x1="200" y1="82" x2="200" y2="92" stroke-width="0.75" transform="rotate(225 200 200)"/>
+                                    <line x1="200" y1="78" x2="200" y2="96" stroke-width="1.5" transform="rotate(210 200 200)"/>
+                                    <line x1="200" y1="82" x2="200" y2="92" stroke-width="0.75" transform="rotate(255 200 200)"/>
+                                    <line x1="200" y1="78" x2="200" y2="96" stroke-width="1.5" transform="rotate(240 200 200)"/>
+                                    <line x1="200" y1="82" x2="200" y2="92" stroke-width="0.75" transform="rotate(285 200 200)"/>
+                                    <line x1="200" y1="78" x2="200" y2="96" stroke-width="1.5" transform="rotate(270 200 200)"/>
+                                    <line x1="200" y1="82" x2="200" y2="92" stroke-width="0.75" transform="rotate(315 200 200)"/>
+                                    <line x1="200" y1="78" x2="200" y2="96" stroke-width="1.5" transform="rotate(300 200 200)"/>
+                                    <line x1="200" y1="82" x2="200" y2="92" stroke-width="0.75" transform="rotate(345 200 200)"/>
+                                    <line x1="200" y1="78" x2="200" y2="96" stroke-width="1.5" transform="rotate(330 200 200)"/>
+                                </g>
+
+                                <!-- Losange extérieur or -->
+                                <path d="M200 108 L292 200 L200 292 L108 200 Z" stroke="#B8882E" stroke-opacity="0.18" stroke-width="1"/>
+
+                                <!-- Losange intérieur or (plus opaque) -->
+                                <path d="M200 142 L258 200 L200 258 L142 200 Z" stroke="#B8882E" stroke-opacity="0.28" stroke-width="1.5"/>
+
+                                <!-- Points d'ancrage or aux quatre sommets du losange intérieur -->
+                                <circle cx="200" cy="142" r="3.5" fill="#B8882E" fill-opacity="0.5"/>
+                                <circle cx="258" cy="200" r="3.5" fill="#B8882E" fill-opacity="0.5"/>
+                                <circle cx="200" cy="258" r="3.5" fill="#B8882E" fill-opacity="0.5"/>
+                                <circle cx="142" cy="200" r="3.5" fill="#B8882E" fill-opacity="0.5"/>
+
+                                <!-- Monogramme V — navy (grand) -->
+                                <path d="M158 158 L200 228 L242 158" stroke="#0D2545" stroke-opacity="0.15" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+                                <!-- Monogramme V — or (petit, intérieur) -->
+                                <path d="M172 158 L200 208 L228 158" stroke="#B8882E" stroke-opacity="0.6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+                                <!-- Point central -->
+                                <circle cx="200" cy="200" r="4" fill="#0D2545" fill-opacity="0.12"/>
+                                <circle cx="200" cy="200" r="2" fill="#B8882E" fill-opacity="0.7"/>
+                            </svg>
+                        </div>
+
+                        <!-- Carte flottante haute — analyse -->
+                        <div class="float-card float-card--top">
+                            <div class="float-card__icon">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 1.5L9.5 5H13.5L10.3 7.3L11.6 11L8 8.8L4.4 11L5.7 7.3L2.5 5H6.5L8 1.5Z" fill="#B8882E"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="float-card__label">Analyse complète</div>
+                                <div class="float-card__value">Historique · Technique · Prix</div>
+                            </div>
+                        </div>
+
+                        <!-- Carte flottante basse — verdict -->
+                        <div class="float-card float-card--bottom">
+                            <div class="float-card__icon float-card__icon--success">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M2.5 8.5L6 12L13.5 4" stroke="#2A7A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="float-card__label">Verdict clair</div>
+                                <div class="float-card__value">Bonne affaire ou pas</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Décoration de fond — halo dégradé -->
+            <div class="hero__bg-halo" aria-hidden="true"></div>
+        </section>
+
+    </main>
+
+
+    <!-- ===================================================
+         FOOTER — Pied de page
+    ==================================================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__layout">
+
+                <!-- Marque et accroche -->
+                <div class="footer__brand">
+                    <a href="/" class="logo" aria-label="Veridrive — Accueil">
+                        <div class="logo__mark" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 30 30" fill="none">
+                                <path d="M3 5L15 24L27 5" stroke="var(--color-navy)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 5L15 15L21 5" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span class="logo__wordmark">Veridrive</span>
+                    </a>
+                    <p class="footer__tagline">
+                        Votre compagnon auto indépendant pour acheter en toute confiance.
+                    </p>
+                </div>
+
+                <!-- Mentions légales -->
+                <div class="footer__legal">
+                    <p class="footer__copyright">© 2026 Veridrive. Tous droits réservés.</p>
+                    <nav class="footer__links" aria-label="Liens légaux">
+                        <a href="#">Mentions légales</a>
+                        <a href="#">Confidentialité</a>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
