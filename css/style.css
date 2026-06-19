@@ -397,6 +397,25 @@ ul, ol {
     color: var(--color-success);
 }
 
+/* Badge critique — points rédhibitoires et signaux graves */
+.badge-critical {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: 2px var(--space-2);
+    background-color: var(--color-critical-pale);
+    border: 1px solid var(--color-critical-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-critical);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
 
 /* ============================================================
    7. HEADER

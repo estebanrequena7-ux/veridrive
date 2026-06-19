@@ -1,0 +1,726 @@
+/* ============================================================
+   VERIDRIVE — MODULE ANNONCES
+   Styles spécifiques à annonces.html
+   Complète css/style.css sans le remplacer.
+   Toutes les valeurs sont des variables de style.css.
+   ============================================================ */
+
+
+/* ============================================================
+   1. HERO COMPACT — Repris du même modèle que checklist.css
+   ============================================================ */
+
+.page-hero {
+    padding: var(--space-16) 0 var(--space-12);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.page-hero__eyebrow {
+    display: flex;
+    margin-bottom: var(--space-5);
+}
+
+.page-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-3xl), 4vw, var(--text-6xl));
+    font-weight: 600;
+    line-height: var(--leading-tight);
+    color: var(--text-dark);
+    letter-spacing: -0.025em;
+    margin-bottom: var(--space-5);
+}
+
+.page-hero__subtitle {
+    font-size: clamp(var(--text-base), 1.5vw, var(--text-lg));
+    color: var(--text-muted);
+    max-width: 600px;
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-6);
+}
+
+.page-hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+}
+
+.meta-stat {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+.meta-stat strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   2. SECTIONS — Structure commune aux trois parties
+   ============================================================ */
+
+.section-part {
+    padding: var(--space-20) 0;
+}
+
+/* Fond alterné pour la partie 2 */
+.section-part--alt {
+    background-color: var(--bg-subtle);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+/* En-tête de section */
+.section-heading {
+    max-width: 680px;
+    margin-bottom: var(--space-12);
+}
+
+.section-heading__eyebrow {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-4);
+}
+
+.section-heading__title {
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-3xl), 3.5vw, var(--text-5xl));
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: -0.02em;
+    line-height: var(--leading-snug);
+    margin-bottom: var(--space-4);
+}
+
+.section-heading__intro {
+    font-size: var(--text-lg);
+    color: var(--text-muted);
+    line-height: var(--leading-relaxed);
+}
+
+
+/* ============================================================
+   3. PARTIE 1 — CARTES SIGNAUX D'ALERTE
+   ============================================================ */
+
+.signals-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+}
+
+/* Carte signal — base */
+.signal-card {
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    background-color: var(--bg-card);
+    overflow: hidden;
+    transition: box-shadow var(--transition), border-color var(--transition);
+}
+
+.signal-card:hover {
+    box-shadow: var(--shadow-sm);
+    border-color: var(--border);
+}
+
+/* Variante GRAVE — bordure gauche rouge, fond teinté */
+.signal-card--grave {
+    border-left: 3px solid var(--color-critical-border);
+    background-color: var(--color-critical-pale);
+}
+
+.signal-card--grave:hover {
+    border-left-color: var(--color-critical);
+    box-shadow: var(--shadow-sm);
+}
+
+/* En-tête toujours visible */
+.signal-card__header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: var(--space-5);
+}
+
+/* Icône carrée */
+.signal-card__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    background-color: var(--color-navy-pale);
+    border: 1px solid rgba(13, 37, 69, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.signal-card--grave .signal-card__icon {
+    background-color: rgba(192, 57, 43, 0.1);
+    border-color: var(--color-critical-border);
+}
+
+.signal-card__meta {
+    flex: 1;
+    min-width: 0;
+}
+
+.signal-card__title-row {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.signal-card__title {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: var(--leading-snug);
+}
+
+/* Zone dépliable — même style que checklist.html */
+.signal-card__detail {
+    border-top: 1px solid var(--border-subtle);
+}
+
+.signal-card__detail summary {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    list-style: none;
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.signal-card__detail summary::-webkit-details-marker { display: none; }
+.signal-card__detail summary::marker              { display: none; }
+
+.signal-card__detail summary:hover {
+    color: var(--color-navy);
+    background-color: var(--color-navy-pale);
+}
+
+.detail-arrow {
+    flex-shrink: 0;
+    transition: transform var(--transition);
+}
+
+.signal-card__detail[open] .detail-arrow {
+    transform: rotate(90deg);
+}
+
+/* Corps développé */
+.signal-detail-body {
+    padding: var(--space-2) var(--space-5) var(--space-5);
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.signal-detail-label {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: var(--space-2);
+}
+
+.signal-detail-text {
+    font-size: var(--text-sm);
+    color: var(--text-body);
+    line-height: var(--leading-relaxed);
+}
+
+/* Section "Quoi faire" — fond bleu très pâle, bordure gauche */
+.signal-detail-section--action .signal-detail-text {
+    padding: var(--space-3) var(--space-4);
+    background-color: rgba(13, 37, 69, 0.03);
+    border-left: 2px solid var(--color-navy-light);
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.signal-card--grave .signal-detail-section--action .signal-detail-text {
+    background-color: rgba(192, 57, 43, 0.04);
+    border-left-color: var(--color-critical);
+}
+
+
+/* ============================================================
+   4. PARTIE 2 — CARTES ARNAQUES (3 panneaux)
+   ============================================================ */
+
+.scams-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.scam-card {
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    background-color: var(--bg-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-xs);
+}
+
+/* En-tête — fond marine */
+.scam-card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-5) var(--space-6);
+    background-color: var(--color-navy);
+}
+
+/* Numéro en grand serif discret */
+.scam-number {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.28);
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 28px;
+}
+
+.scam-title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: -0.01em;
+    flex: 1;
+    line-height: var(--leading-snug);
+}
+
+.scam-tag {
+    display: inline-flex;
+    padding: var(--space-1) var(--space-3);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Corps — 3 panneaux côte à côte sur desktop */
+.scam-card__body {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.scam-panel {
+    padding: var(--space-5) var(--space-6);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.scam-panel:last-child {
+    border-bottom: none;
+}
+
+/* Label de panneau */
+.scam-panel__label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: var(--space-3);
+}
+
+.scam-panel--how    .scam-panel__label { color: var(--text-muted); }
+.scam-panel--signal .scam-panel__label { color: var(--color-gold); }
+.scam-panel--defense .scam-panel__label { color: var(--color-success); }
+
+.scam-panel--signal  { background-color: rgba(184, 136, 46, 0.03); }
+.scam-panel--defense { background-color: rgba(42, 122, 74, 0.03); }
+
+.scam-panel__text {
+    font-size: var(--text-sm);
+    color: var(--text-body);
+    line-height: var(--leading-relaxed);
+}
+
+
+/* ============================================================
+   5. PARTIE 3 — RÉFLEXES + TEST RAPIDE
+   ============================================================ */
+
+.part3-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    align-items: flex-start;
+}
+
+/* ── Colonne réflexes ── */
+
+.reflexes-heading {
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-2xl), 3vw, var(--text-4xl));
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: -0.02em;
+    line-height: var(--leading-snug);
+    margin-bottom: var(--space-2);
+}
+
+.reflexes-intro {
+    font-size: var(--text-base);
+    color: var(--text-muted);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-8);
+}
+
+.reflexes-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.reflex-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.reflex-item:hover {
+    border-color: var(--border);
+    box-shadow: var(--shadow-xs);
+}
+
+/* Numéro circulaire */
+.reflex-item__number {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-navy-pale);
+    border: 1px solid rgba(13, 37, 69, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-navy);
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.reflex-item__text {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: var(--leading-snug);
+    margin-bottom: var(--space-1);
+}
+
+.reflex-item__sub {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    line-height: var(--leading-relaxed);
+}
+
+/* ── Widget Test rapide ── */
+
+.test-widget {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.test-widget__header {
+    padding: var(--space-5) var(--space-6);
+    background-color: var(--bg-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.test-widget__title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: -0.01em;
+    margin-bottom: var(--space-1);
+}
+
+.test-widget__subtitle {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    line-height: var(--leading-relaxed);
+}
+
+/* Liste des signaux dans le widget */
+.test-signals {
+    padding: var(--space-3) var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.test-signal-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    user-select: none;
+    transition: background-color var(--transition-fast);
+}
+
+.test-signal-item:hover {
+    background-color: var(--color-navy-pale);
+}
+
+/* Input natif caché */
+.test-signal-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+/* Case visuelle custom */
+.test-signal-box {
+    width: 18px;
+    height: 18px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--border);
+    background-color: var(--white);
+    flex-shrink: 0;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-fast),
+                border-color var(--transition-fast),
+                transform 250ms var(--ease-spring);
+}
+
+.test-signal-item:hover .test-signal-box {
+    border-color: var(--color-navy);
+}
+
+.test-signal-item.is-checked .test-signal-box {
+    background-color: var(--color-navy);
+    border-color: var(--color-navy);
+    transform: scale(1.05);
+}
+
+/* Case cochée GRAVE — rouge */
+.test-signal-item.is-checked.is-grave .test-signal-box {
+    background-color: var(--color-critical);
+    border-color: var(--color-critical);
+}
+
+.test-signal-box svg {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity var(--transition-fast), transform 250ms var(--ease-spring);
+}
+
+.test-signal-item.is-checked .test-signal-box svg {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.test-signal-label {
+    font-size: var(--text-sm);
+    color: var(--text-body);
+    line-height: var(--leading-snug);
+    flex: 1;
+}
+
+/* Point rouge pour les signaux graves */
+.test-signal-grave-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-critical);
+    flex-shrink: 0;
+    margin-top: 7px;
+    opacity: 0.55;
+}
+
+/* Zone verdict */
+.test-verdict {
+    margin: var(--space-4) var(--space-5) var(--space-2);
+    padding: var(--space-4) var(--space-5);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-subtle);
+    background-color: var(--bg-subtle);
+    transition: background-color var(--transition), border-color var(--transition);
+}
+
+.test-verdict__level {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: var(--space-2);
+    color: var(--text-muted);
+    transition: color var(--transition);
+}
+
+.test-verdict__message {
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--text-body);
+}
+
+/* Variantes de verdict */
+.test-verdict[data-level="ok"] {
+    background-color: rgba(42, 122, 74, 0.05);
+    border-color: rgba(42, 122, 74, 0.22);
+}
+.test-verdict[data-level="ok"] .test-verdict__level { color: var(--color-success); }
+
+.test-verdict[data-level="watch"] {
+    background-color: rgba(184, 136, 46, 0.06);
+    border-color: rgba(184, 136, 46, 0.25);
+}
+.test-verdict[data-level="watch"] .test-verdict__level { color: var(--color-gold); }
+
+.test-verdict[data-level="caution"] {
+    background-color: rgba(200, 90, 20, 0.06);
+    border-color: rgba(200, 90, 20, 0.25);
+}
+.test-verdict[data-level="caution"] .test-verdict__level { color: #C85A14; }
+
+.test-verdict[data-level="danger"] {
+    background-color: var(--color-critical-pale);
+    border-color: var(--color-critical-border);
+}
+.test-verdict[data-level="danger"] .test-verdict__level { color: var(--color-critical); }
+
+/* Bouton de réinitialisation */
+.test-reset {
+    display: block;
+    width: calc(100% - 2 * var(--space-5));
+    margin: var(--space-3) var(--space-5) var(--space-5);
+    padding: var(--space-2) var(--space-4);
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: var(--text-light);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-full);
+    background: none;
+    cursor: pointer;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.test-reset:hover {
+    color: var(--text-muted);
+    border-color: var(--border);
+}
+
+
+/* ============================================================
+   6. RESPONSIVE
+   ============================================================ */
+
+@media (min-width: 640px) {
+    .signals-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Panneaux arnaques côte à côte sur tablette+ */
+    .scam-card__body {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .scam-panel {
+        border-bottom: none;
+        border-right: 1px solid var(--border-subtle);
+    }
+    .scam-panel:last-child {
+        border-right: none;
+    }
+}
+
+@media (min-width: 900px) {
+    /* Layout deux colonnes pour la partie 3 */
+    .part3-layout {
+        grid-template-columns: 1fr 400px;
+    }
+
+    /* Widget collant sous le header */
+    .test-widget {
+        position: sticky;
+        top: calc(var(--header-height) + var(--space-6));
+    }
+}
+
+@media (max-width: 767px) {
+    .scam-card__header {
+        flex-wrap: wrap;
+        gap: var(--space-2);
+    }
+    .scam-tag {
+        order: 3;
+    }
+}
+
+@media (max-width: 640px) {
+    .section-part {
+        padding: var(--space-12) 0;
+    }
+    .section-heading {
+        margin-bottom: var(--space-8);
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero {
+        padding: var(--space-10) 0 var(--space-8);
+    }
+    .scam-card__header {
+        padding: var(--space-4) var(--space-4);
+    }
+    .scam-panel {
+        padding: var(--space-4);
+    }
+    .test-signals {
+        padding: var(--space-3) var(--space-4);
+    }
+    .test-verdict {
+        margin: var(--space-3) var(--space-4) var(--space-2);
+    }
+    .test-reset {
+        width: calc(100% - 2 * var(--space-4));
+        margin-left: var(--space-4);
+        margin-right: var(--space-4);
+    }
+}

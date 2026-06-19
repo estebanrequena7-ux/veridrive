@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Décrypter une annonce — Veridrive</title>
+    <meta name="description" content="Apprenez à repérer les signaux d'alerte dans une annonce de voiture d'occasion et à identifier les arnaques les plus courantes avant de vous déplacer.">
+
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+    <!-- Design system global + styles de la page -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/annonces.css">
+</head>
+<body>
+
+    <!-- ===================================================
+         HEADER
+    ==================================================== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navigation principale">
+
+                <a href="index.html" class="logo" aria-label="Veridrive — Retour à l'accueil">
+                    <div class="logo__mark" aria-hidden="true">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M3 5L15 24L27 5" stroke="var(--color-navy)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 5L15 15L21 5" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="logo__wordmark">Veridrive</span>
+                </a>
+
+                <div class="nav__links">
+                    <a href="checklist.html" class="nav__link">Checklist</a>
+                    <a href="annonces.html" class="nav__link">Annonces</a>
+                </div>
+
+                <div class="nav__pill" role="status" aria-label="Statut du service">
+                    <span class="nav__pill-dot" aria-hidden="true"></span>
+                    <span>Bientôt disponible</span>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- ===================================================
+         CONTENU PRINCIPAL
+    ==================================================== -->
+    <main>
+
+        <!-- ===============================================
+             HERO COMPACT
+        ================================================ -->
+        <div class="page-hero">
+            <div class="container">
+
+                <div class="page-hero__eyebrow">
+                    <span class="badge">
+                        <span class="badge__dot" aria-hidden="true"></span>
+                        Guide anti-arnaque
+                    </span>
+                </div>
+
+                <h1 class="page-hero__title">
+                    Décrypter une annonce<br>
+                    <em style="font-style: italic; font-weight: 400; color: var(--color-navy-mid);">et repérer les arnaques</em>
+                </h1>
+
+                <p class="page-hero__subtitle">
+                    Les fraudeurs ne sont pas toujours faciles à identifier. Ce guide vous aide à lire une annonce d'occasion avec un œil averti, avant même de décrocher le téléphone.
+                </p>
+
+                <div class="page-hero__meta">
+                    <div class="meta-stat">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M8 1.5C4.41 1.5 1.5 4.41 1.5 8S4.41 14.5 8 14.5 14.5 11.59 14.5 8 11.59 1.5 8 1.5Z" stroke="var(--color-critical)" stroke-width="1.25"/>
+                            <path d="M8 5.5V8.5M8 10.5V11" stroke="var(--color-critical)" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <span><strong>8 signaux</strong> d'alerte</span>
+                    </div>
+                    <div class="meta-stat">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M3 3h10v10H3z" stroke="var(--text-muted)" stroke-width="1.25" stroke-linejoin="round"/>
+                            <path d="M6 7h4M6 9.5h2" stroke="var(--text-muted)" stroke-width="1.25" stroke-linecap="round"/>
+                        </svg>
+                        <span><strong>6 arnaques</strong> décryptées</span>
+                    </div>
+                    <div class="meta-stat">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M8 1.5L10 6H14.5L11 8.8L12.5 13.5L8 10.8L3.5 13.5L5 8.8L1.5 6H6L8 1.5Z" stroke="var(--color-gold)" stroke-width="1.25" stroke-linejoin="round"/>
+                        </svg>
+                        <span><strong>6 réflexes</strong> à adopter</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- ===============================================
+             PARTIE 1 — SIGNAUX D'ALERTE
+        ================================================ -->
+        <section class="section-part" aria-labelledby="part1-title">
+            <div class="container">
+
+                <div class="section-heading" data-animate>
+                    <p class="section-heading__eyebrow">Partie 1</p>
+                    <h2 class="section-heading__title" id="part1-title">
+                        Les signaux d'alerte<br>dans une annonce
+                    </h2>
+                    <p class="section-heading__intro">
+                        Certains éléments d'une annonce doivent déclencher une vigilance immédiate. Deux d'entre eux sont des signaux rédhibitoires : si vous les observez, ne donnez pas suite.
+                    </p>
+                </div>
+
+                <!-- Légende des niveaux -->
+                <div style="display: flex; flex-wrap: wrap; gap: var(--space-4); margin-bottom: var(--space-8);" data-animate>
+                    <span class="badge-critical">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor" aria-hidden="true"><circle cx="4" cy="4" r="4"/></svg>
+                        Signal rédhibitoire
+                    </span>
+                    <span style="display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm); color: var(--text-muted);">
+                        <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-gold); opacity: 0.7; flex-shrink: 0;"></span>
+                        Signal de vigilance
+                    </span>
+                </div>
+
+                <div class="signals-grid">
+
+                    <!-- SIGNAL 1 — GRAVE : Vendeur à l'étranger -->
+                    <div class="signal-card signal-card--grave" data-animate>
+                        <div class="signal-card__header">
+                            <div class="signal-card__icon" aria-hidden="true">🌍</div>
+                            <div class="signal-card__meta">
+                                <div class="signal-card__title-row">
+                                    <span class="signal-card__title">Vendeur à l'étranger ou injoignable en personne</span>
+                                    <span class="badge-critical">Rédhibitoire</span>
+                                </div>
+                            </div>
+                        </div>
+                        <details class="signal-card__detail">
+                            <summary>
+                                <svg class="detail-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                    <path d="M5 3L9 7L5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Comprendre ce signal
+                            </summary>
+                            <div class="signal-detail-body">
+                                <div>
+                                    <p class="signal-detail-label">Pourquoi c'est suspect</p>
+                                    <p class="signal-detail-text">
+                                        La situation classique : le vendeur se dit militaire en mission, travailleur expatrié, ou en voyage d'affaires. Il ne peut pas faire visiter le véhicule lui-même et propose de passer par un « intermédiaire de confiance » ou un service de livraison sécurisée. Le véhicule n'existe souvent pas, ou appartient à quelqu'un d'autre.
+                                    </p>
+                                </div>
+                                <div class="signal-detail-section signal-detail-section--action">
+                                    <p class="signal-detail-label">Quoi faire</p>
+                                    <p class="signal-detail-text">
+                                        Ne donnez pas suite à cette annonce. Aucun mécanisme de « livraison sécurisée » ou d'« escrow auto » n'est fiable dans ce contexte. Si vous ne pouvez pas voir le vendeur et le véhicule en personne, passez votre chemin.
+                                    </p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- SIGNAL 2 — GRAVE : Acompte avant visite -->
+                    <div class="signal-card signal-card--grave" data-animate>
+                        <div class="signal-card__header">
+                            <div class="signal-card__icon" aria-hidden="true">💸</div>
+                            <div class="signal-card__meta">
+                                <div class="signal-card__title-row">
+                                    <span class="signal-card__title">Acompte ou virement demandé avant la visite</span>
+                                    <span class="badge-critical">Rédhibitoire</span>
+                                </div>
+                            </div>
+                        </div>
+                        <details class="signal-card__detail">
+                            <summary>
+                                <svg class="detail-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                    <path d="M5 3L9 7L5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Comprendre ce signal
+                            </summary>
+                            <div class="signal-detail-body">
+                                <div>
+                                    <p class="signal-detail-label">Pourquoi c'est suspect</p>
+                                    <p class="signal-detail-text">
+                                        Un vendeur sérieux n'a aucune raison de vous demander de l'argent avant que vous ayez vu le véhicule. Cette demande précoce est la signature de l'arnaque à l'acompte : une fois le virement reçu, le vendeur devient injoignable. Les prétextes avancés varient : « frais de réservation », « garantie de sérieux », « blocage du véhicule »… Aucun n'est légitime.
+                                    </p>
+                                </div>
+                                <div class="signal-detail-section signal-detail-section--action">
+                                    <p class="signal-detail-label">Quoi faire</p>
+                                    <p class="signal-detail-text">
+                                        Ne versez jamais d'argent avant d'avoir vu le véhicule physiquement. Cette règle est absolue. En cas de doute, signalez l'annonce sur la plateforme concernée.
+                                    </p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- SIGNAL 3 : Prix anormalement bas -->
+                    <div class="signal-card" data-animate>
+                        <div class="signal-card__header">
+                            <div class="signal-card__icon" aria-hidden="true">📉</div>
+                            <div class="signal-card__meta">
+                                <div class="signal-card__title-row">
+                                    <span class="signal-card__title">Prix anormalement bas pour le modèle et le kilométrage</span>
+                                </div>
+                            </div>
+                        </div>
+                        <details class="signal-card__detail">
+                            <summary>
+                                <svg class="detail-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                    <path d="M5 3L9 7L5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Comprendre ce signal
+                            </summary>
+                            <div class="signal-detail-body">
+                                <div>
+                                    <p class="signal-detail-label">Pourquoi c'est suspect</p>
+                                    <p class="signal-detail-text">
+                                        Les bonnes affaires existent, mais une voiture affichée à 30 ou 40 % en dessous de la cote du marché mérite des explications. Soit le vendeur cache un problème important (accident non déclaré, moteur en fin de vie, gage), soit l'annonce est frauduleuse. La rareté des vraies aubaines est un fait, pas un cynisme.
+                                    </p>
+                                </div>
+                                <div class="signal-detail-section signal-detail-section--action">
+                                    <p class="signal-detail-label">Quoi faire</p>
+                                    <p class="signal-detail-text">
+                                        Consultez la cote de référence du modèle sur une source comme l'Argus ou La Centrale. Si le prix s'écarte de plus de 20 % vers le bas sans explication claire (accident réparé, panne déclarée), demandez des justifications avant de vous déplacer.
+                                    </p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- SIGNAL 4 : Kilométrage suspect -->
+                    <div class="signal-card" data-animate>
+                        <div class="signal-card__header">
+                            <div class="signal-card__icon" aria-hidden="true">🔢</div>
+                            <div class="signal-card__meta">
+                                <div class="signal-card__title-row">
+                                    <span class="signal-card__title">Kilométrage très bas pour l'âge du véhicule</span>
+                                </div>
+                            </div>
+                        </div>
+                        <details class="signal-card__detail">
+                            <summary>
+                                <svg class="detail-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                    <path d="M5 3L9 7L5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Comprendre ce signal
+                            </summary>
+                            <div class="signal-detail-body">
+                                <div>
+                                    <p class="signal-detail-label">Pourquoi c'est suspect</p>
+                                    <p class="signal-detail-text">
+                                        En France, la moyenne nationale est d'environ 12 000 à 15 000 km par an. Une voiture de dix ans qui affiche 40 000 km doit susciter des questions. La falsification de compteur (« traquage ») reste une pratique illégale mais persistante. Un kilométrage trop faible peut aussi signaler un véhicule dont le compteur a été remplacé ou dont les relevés de contrôle technique ont été omis.
+                                    </p>
+                                </div>
+                                <div class="signal-detail-section signal-detail-section--action">
+                                    <p class="signal-detail-label">Quoi faire</p>
+                                    <p class="signal-detail-text">
+                                        Demandez les rapports de contrôle technique et les factures d'entretien : ils indiquent le kilométrage à chaque passage. Consultez aussi l'historique HistoVec, qui peut révéler des incohérences entre les contrôles techniques successifs.
+                                    </p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- SIGNAL 5 : Photos -->
+                    <div class="signal-card" data-animate>
+                        <div class="signal-card__header">
+                            <div class="signal-card__icon" aria-hidden="true">📷</div>
+                            <div class="signal-card__meta">
+                                <div class="signal-card__title-row">
+                                    <span class="signal-card__title">Annonce sans photo, ou avec des photos génériques ou volées</span>
+                                </div>
+                            </div>
+                        </div>
+                        <details class="signal-card__detail">
+                            <summary>
+                                <svg class="detail-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                    <path d="M5 3L9 7L5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Comprendre ce signal
+                            </summary>
+                            <div class="signal-detail-body">
+                                <div>
+                                    <p class="signal-detail-label">Pourquoi c'est suspect</p>
+                                    <p class="signal-detail-text">
+                                        Les photos de stock issues du site du constructeur, les visuels en haute résolution sans plaque visible, ou les images de qualité professionnelle d'un modèle « identique » sont des signaux classiques. Le fraudeur ne possède pas le véhicule réel : il emprunte des visuels existants pour rendre l'annonce crédible. Une annonce sans aucune photo doit être considérée avec la même méfiance.
+                                    </p>
+                                </div>
+                                <div class="signal-detail-section signal-detail-section--action">
+                                    <p class="signal-detail-label">Quoi faire</p>
+                                    <p class="signal-detail-text">
+                                        Faites une recherche inversée de l'image (Google Images, TinEye) : si la même photo apparaît sur plusieurs annonces ou sites, c'est un signal fort. Exigez des photos du véhicule réel, avec la plaque visible et si possible une feuille indiquant la date du jour.
+                                    </p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- SIGNAL 6 : Description "en l'état" -->
+                    <div class="signal-card" data-animate>
+                        <div class="signal-card__header">
+                            <div class="signal-card__icon" aria-hidden="true">📄</div>
+                            <div class="signal-card__meta">
+                                <div class="signal-card__title-row">
+                                    <span class="signal-card__title">Description floue ou mention systématique de la vente "en l'état"</span>
+                                </div>
+                            </div>
+                        </div>
+                        <details class="signal-card__detail">
+                            <summary>
+                                <svg class="detail-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                    <path d="M5 3L9 7L5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Comprendre ce signal
+                            </summary>
+                            <div class="signal-detail-body">
+                                <div>
+                                    <p class="signal-detail-label">Pourquoi c'est suspect</p>
+                                    <p class="signal-detail-text">
+                                        La mention « vendu en l'état, sans garantie » n'est pas illégale dans le cadre d'une vente entre particuliers, mais elle peut signaler que le vendeur veut se prémunir contre des recours ultérieurs. Associée à une description vague, elle peut indiquer un vice caché connu du vendeur. Attention : entre particuliers, la garantie légale des vices cachés reste applicable même si l'annonce dit le contraire, à condition de prouver que le vice était antérieur à la vente et connu du vendeur.
+                                    </p>
+                                </div>
+                                <div class="signal-detail-section signal-detail-section--action">
+                                    <p class="signal-detail-label">Quoi faire</p>
+                                    <p class="signal-detail-text">
+                                        Posez des questions précises par écrit avant la visite (état de la courroie ou chaîne de distribution, dernier contrôle technique, historique des réparations). Les réponses évasives sont révélatrices.
+                                    </p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- SIGNAL 7 : Pression temporelle -->
+                    <div class="signal-card" data-animate>
+                        <div class="signal-card__header">
+                            <div class="signal-card__icon" aria-hidden="true">⏱️</div>
+                            <div class="signal-card__meta">
+                                <div class="signal-card__title-row">
+                                    <span class="signal-card__title">Pression pour conclure rapidement</span>
+                                </div>
+                            </div>
+                        </div>
+                        <details class="signal-card__detail">
+                            <summary>
+                                <svg class="detail-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                    <path d="M5 3L9 7L5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Comprendre ce signal
+                            </summary>
+                            <div class="signal-detail-body">
+                                <div>
+                                    <p class="signal-detail-label">Pourquoi c'est suspect</p>
+                                    <p class="signal-detail-text">
+                                        « J'ai plusieurs acheteurs intéressés », « c'est pour ce soir sinon je vends à quelqu'un d'autre », « je pars à l'étranger demain »… Ces formules visent à vous priver du temps nécessaire pour vérifier le véhicule et réfléchir. Un vendeur honnête comprend qu'une décision de plusieurs milliers d'euros ne se prend pas sous pression.
+                                    </p>
+                                </div>
+                                <div class="signal-detail-section signal-detail-section--action">
+                                    <p class="signal-detail-label">Quoi faire</p>
+                                    <p class="signal-detail-text">
+                                        Ne prenez jamais une décision d'achat dans l'urgence. Si le vendeur refuse de vous laisser le temps de réfléchir ou de faire expertiser, c'est en soi une raison suffisante pour ne pas acheter.
+                                    </p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- SIGNAL 8 : Refus plaque/VIN -->
+                    <div class="signal-card" data-animate>
+                        <div class="signal-card__header">
+                            <div class="signal-card__icon" aria-hidden="true">🔒</div>
+                            <div class="signal-card__meta">
+                                <div class="signal-card__title-row">
+                                    <span class="signal-card__title">Refus de communiquer la plaque ou le numéro VIN</span>
+                                </div>
+                            </div>
+                        </div>
+                        <details class="signal-card__detail">
+                            <summary>
+                                <svg class="detail-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                    <path d="M5 3L9 7L5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Comprendre ce signal
+                            </summary>
+                            <div class="signal-detail-body">
+                                <div>
+                                    <p class="signal-detail-label">Pourquoi c'est suspect</p>
+                                    <p class="signal-detail-text">
+                                        Le numéro de plaque et le VIN (numéro de série gravé dans le véhicule et sur la carte grise) permettent de vérifier l'historique officiel sur HistoVec, de détecter un gage ou une opposition, et de confirmer que le véhicule correspond bien à la carte grise présentée. Un vendeur qui refuse de les communiquer a généralement quelque chose à cacher : véhicule volé, plaques clonées, ou situation administrative irrégulière.
+                                    </p>
+                                </div>
+                                <div class="signal-detail-section signal-detail-section--action">
+                                    <p class="signal-detail-label">Quoi faire</p>
+                                    <p class="signal-detail-text">
+                                        Demandez le numéro de plaque avant de vous déplacer. Avec lui, vous pouvez consulter gratuitement HistoVec (histovec.interieur.gouv.fr) et vérifier qu'il n'y a pas d'opposition ou d'inscription de gage. Refus = signal d'alerte fort.
+                                    </p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===============================================
+             PARTIE 2 — LES ARNAQUES COURANTES
+        ================================================ -->
+        <section class="section-part section-part--alt" aria-labelledby="part2-title">
+            <div class="container">
+
+                <div class="section-heading" data-animate>
+                    <p class="section-heading__eyebrow">Partie 2</p>
+                    <h2 class="section-heading__title" id="part2-title">
+                        Les arnaques courantes<br>expliquées
+                    </h2>
+                    <p class="section-heading__intro">
+                        Comprendre le mécanisme d'une arnaque est le meilleur moyen de ne pas y tomber. Voici les six montages les plus fréquents en France dans la vente de voitures d'occasion.
+                    </p>
+                </div>
+
+                <div class="scams-list">
+
+                    <!-- ARNAQUE 1 — Compteur trafiqué -->
+                    <article class="scam-card" data-animate>
+                        <div class="scam-card__header">
+                            <span class="scam-number" aria-hidden="true">01</span>
+                            <h3 class="scam-title">Le compteur trafiqué</h3>
+                            <span class="scam-tag">Falsification kilométrique</span>
+                        </div>
+                        <div class="scam-card__body">
+                            <div class="scam-panel scam-panel--how">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.25"/>
+                                        <path d="M6 4V6.5L7.5 8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                                    </svg>
+                                    Comment ça fonctionne
+                                </p>
+                                <p class="scam-panel__text">
+                                    Le kilométrage est modifié électroniquement à la baisse pour présenter un véhicule « peu roulé » à un prix injustifié. Le matériel nécessaire est accessible et peu coûteux. Un véhicule dont le compteur a été « traqué » à 80 000 km alors qu'il en a réellement 200 000 voit sa valeur artificiellement gonflée de plusieurs milliers d'euros.
+                                </p>
+                            </div>
+                            <div class="scam-panel scam-panel--signal">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <path d="M6 1L7.2 4.4H11L8.1 6.5L9.3 10L6 7.8L2.7 10L3.9 6.5L1 4.4H4.8L6 1Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                                    </svg>
+                                    Signaux à surveiller
+                                </p>
+                                <p class="scam-panel__text">
+                                    Usure visible sur le volant, les sièges ou les palettes de frein incohérente avec le kilométrage annoncé. Relevés de contrôle technique successifs présentant des valeurs incohérentes. Absence de factures d'entretien correspondant aux révisions attendues.
+                                </p>
+                            </div>
+                            <div class="scam-panel scam-panel--defense">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <path d="M6 1.5L10 3V6.5C10 8.7 8.2 10.7 6 11.5C3.8 10.7 2 8.7 2 6.5V3L6 1.5Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                                    </svg>
+                                    Se défendre
+                                </p>
+                                <p class="scam-panel__text">
+                                    Consultez HistoVec, qui affiche les kilométrages relevés lors des contrôles techniques. Exigez le carnet d'entretien complet et toutes les factures. En cas de suspicion avérée après achat, la falsification de kilométrage est un délit de tromperie, sanctionné par l'article L.213-1 du Code de la consommation (2 ans d'emprisonnement et 300 000 € d'amende). À noter : une clause « kilométrage non garanti » dans l'acte de vente ne protège pas le vendeur qui connaissait la manipulation. Pour un achat auprès d'un professionnel établi dans un autre pays de l'UE, le droit français reste applicable.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ARNAQUE 2 — Voiture sous gage -->
+                    <article class="scam-card" data-animate>
+                        <div class="scam-card__header">
+                            <span class="scam-number" aria-hidden="true">02</span>
+                            <h3 class="scam-title">La voiture sous gage</h3>
+                            <span class="scam-tag">Crédit non soldé</span>
+                        </div>
+                        <div class="scam-card__body">
+                            <div class="scam-panel scam-panel--how">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.25"/>
+                                        <path d="M6 4V6.5L7.5 8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                                    </svg>
+                                    Comment ça fonctionne
+                                </p>
+                                <p class="scam-panel__text">
+                                    Le vendeur a financé le véhicule par un crédit auto ou un LOA non soldé. Le créancier (banque, organisme de crédit) a inscrit un gage sur le véhicule. Le vendeur peut vendre le véhicule à votre insu, mais le créancier peut engager des poursuites sur le bien même après la vente, exposant l'acheteur à des complications juridiques sérieuses, voire à la perte du véhicule.
+                                </p>
+                            </div>
+                            <div class="scam-panel scam-panel--signal">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <path d="M6 1L7.2 4.4H11L8.1 6.5L9.3 10L6 7.8L2.7 10L3.9 6.5L1 4.4H4.8L6 1Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                                    </svg>
+                                    Signaux à surveiller
+                                </p>
+                                <p class="scam-panel__text">
+                                    Vendeur peu enclin à montrer le certificat de situation administrative (certificat de non-gage). Mentions sur la carte grise indiquant une location ou un financement en cours. Refus de communiquer le numéro de plaque avant la visite.
+                                </p>
+                            </div>
+                            <div class="scam-panel scam-panel--defense">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <path d="M6 1.5L10 3V6.5C10 8.7 8.2 10.7 6 11.5C3.8 10.7 2 8.7 2 6.5V3L6 1.5Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                                    </svg>
+                                    Se défendre
+                                </p>
+                                <p class="scam-panel__text">
+                                    Exigez le certificat de situation administrative (anciennement « certificat de non-gage »), disponible gratuitement sur le site officiel du Ministère de l'Intérieur (histovec.interieur.gouv.fr). Ne signez aucune promesse de vente sans l'avoir consulté. Ce document a une validité de 15 jours.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ARNAQUE 3 — Faux séquestre -->
+                    <article class="scam-card" data-animate>
+                        <div class="scam-card__header">
+                            <span class="scam-number" aria-hidden="true">03</span>
+                            <h3 class="scam-title">Le faux séquestre</h3>
+                            <span class="scam-tag">Escrow scam</span>
+                        </div>
+                        <div class="scam-card__body">
+                            <div class="scam-panel scam-panel--how">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.25"/>
+                                        <path d="M6 4V6.5L7.5 8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                                    </svg>
+                                    Comment ça fonctionne
+                                </p>
+                                <p class="scam-panel__text">
+                                    Le vendeur (souvent prétendument à l'étranger) propose de passer par un « tiers de confiance » ou une société de séquestre qui retiendra les fonds jusqu'à réception du véhicule. Le site de séquestre est factice, contrôlé par l'escroc. Une fois le virement effectué, le véhicule n'arrive jamais et le site disparaît.
+                                </p>
+                            </div>
+                            <div class="scam-panel scam-panel--signal">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <path d="M6 1L7.2 4.4H11L8.1 6.5L9.3 10L6 7.8L2.7 10L3.9 6.5L1 4.4H4.8L6 1Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                                    </svg>
+                                    Signaux à surveiller
+                                </p>
+                                <p class="scam-panel__text">
+                                    Vendeur injoignable en France, communication uniquement par email, site de séquestre inconnu ou au nom générique, demande de virement vers un compte étranger. La plateforme elle-même (Leboncoin, La Centrale) ne propose jamais de service de séquestre tiers : c'est toujours un faux.
+                                </p>
+                            </div>
+                            <div class="scam-panel scam-panel--defense">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <path d="M6 1.5L10 3V6.5C10 8.7 8.2 10.7 6 11.5C3.8 10.7 2 8.7 2 6.5V3L6 1.5Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                                    </svg>
+                                    Se défendre
+                                </p>
+                                <p class="scam-panel__text">
+                                    N'utilisez jamais un service de séquestre pour une transaction automobile entre particuliers. La règle d'or est simple : on paie en main propre, le jour de la remise des clés, après signature de l'acte de vente. Tout autre schéma est suspect.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ARNAQUE 4 — VGE -->
+                    <article class="scam-card" data-animate>
+                        <div class="scam-card__header">
+                            <span class="scam-number" aria-hidden="true">04</span>
+                            <h3 class="scam-title">Le VGE non déclaré</h3>
+                            <span class="scam-tag">Véhicule gravement endommagé</span>
+                        </div>
+                        <div class="scam-card__body">
+                            <div class="scam-panel scam-panel--how">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.25"/>
+                                        <path d="M6 4V6.5L7.5 8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                                    </svg>
+                                    Comment ça fonctionne
+                                </p>
+                                <p class="scam-panel__text">
+                                    Un véhicule déclaré économiquement irréparable (EI) par un assureur après un sinistre reçoit la mention VGE (Véhicule Gravement Endommagé) sur sa carte grise. Il peut être racheté et remis en circulation après remise en état, mais certains vendeurs sans scrupules masquent cette mention ou revendent le véhicule sans la mentionner, parfois à prix quasi-normal.
+                                </p>
+                            </div>
+                            <div class="scam-panel scam-panel--signal">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <path d="M6 1L7.2 4.4H11L8.1 6.5L9.3 10L6 7.8L2.7 10L3.9 6.5L1 4.4H4.8L6 1Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                                    </svg>
+                                    Signaux à surveiller
+                                </p>
+                                <p class="scam-panel__text">
+                                    Carte grise portant la mention « VE » (véhicule endommagé) ou « VGE ». Traces de peinture, de soudures ou de remplacement de pièces de carrosserie non signalées. Dossier technique incomplet ou refus de présenter les documents de remise en état.
+                                </p>
+                            </div>
+                            <div class="scam-panel scam-panel--defense">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <path d="M6 1.5L10 3V6.5C10 8.7 8.2 10.7 6 11.5C3.8 10.7 2 8.7 2 6.5V3L6 1.5Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                                    </svg>
+                                    Se défendre
+                                </p>
+                                <p class="scam-panel__text">
+                                    Vérifiez la carte grise attentivement : la mention VE ou VGE y est obligatoirement apposée. HistoVec affiche également le statut du véhicule. Un véhicule reconditionnné après sinistre doit être accompagné d'un procès-verbal de réception des travaux. En cas de doute, faites expertiser par un professionnel indépendant.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ARNAQUE 5 — Clonage de plaques -->
+                    <article class="scam-card" data-animate>
+                        <div class="scam-card__header">
+                            <span class="scam-number" aria-hidden="true">05</span>
+                            <h3 class="scam-title">Le clonage de plaques</h3>
+                            <span class="scam-tag">Identité usurpée</span>
+                        </div>
+                        <div class="scam-card__body">
+                            <div class="scam-panel scam-panel--how">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.25"/>
+                                        <path d="M6 4V6.5L7.5 8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                                    </svg>
+                                    Comment ça fonctionne
+                                </p>
+                                <p class="scam-panel__text">
+                                    Un véhicule volé (ou accidenté) reçoit les plaques d'immatriculation d'un véhicule identique en circulation. La carte grise présentée appartient au véhicule légitime, rendant le contrôle difficile pour un acheteur non averti. L'acheteur peut se retrouver en possession d'un bien volé, sans recours possible contre le vendeur disparu.
+                                </p>
+                            </div>
+                            <div class="scam-panel scam-panel--signal">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <path d="M6 1L7.2 4.4H11L8.1 6.5L9.3 10L6 7.8L2.7 10L3.9 6.5L1 4.4H4.8L6 1Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                                    </svg>
+                                    Signaux à surveiller
+                                </p>
+                                <p class="scam-panel__text">
+                                    Discordance entre la couleur indiquée sur la carte grise et la couleur réelle. Numéro VIN (gravé sur le chassis, le vitrage et la plaque constructeur) ne correspondant pas à la carte grise. Vendeur refusant d'ouvrir le capot pour vérifier la plaque constructeur.
+                                </p>
+                            </div>
+                            <div class="scam-panel scam-panel--defense">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <path d="M6 1.5L10 3V6.5C10 8.7 8.2 10.7 6 11.5C3.8 10.7 2 8.7 2 6.5V3L6 1.5Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                                    </svg>
+                                    Se défendre
+                                </p>
+                                <p class="scam-panel__text">
+                                    Vérifiez systématiquement que le numéro VIN gravé sur le tableau de bord (côté passager, visible depuis l'extérieur), la plaque constructeur sous le capot, et la carte grise concordent. Consultez HistoVec avec le numéro de plaque ET avec le VIN et comparez les informations.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ARNAQUE 6 — Arnaque à l'acompte -->
+                    <article class="scam-card" data-animate>
+                        <div class="scam-card__header">
+                            <span class="scam-number" aria-hidden="true">06</span>
+                            <h3 class="scam-title">L'arnaque à l'acompte</h3>
+                            <span class="scam-tag">Advance fee fraud</span>
+                        </div>
+                        <div class="scam-card__body">
+                            <div class="scam-panel scam-panel--how">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.25"/>
+                                        <path d="M6 4V6.5L7.5 8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                                    </svg>
+                                    Comment ça fonctionne
+                                </p>
+                                <p class="scam-panel__text">
+                                    L'escroc demande un « acompte de réservation » ou des « frais de transport » pour bloquer le véhicule avant votre venue. Une fois le virement effectué (souvent vers un compte étranger ou via mandat), il devient injoignable. Le récupérer est quasi impossible, surtout si le virement a été envoyé hors de France.
+                                </p>
+                            </div>
+                            <div class="scam-panel scam-panel--signal">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <path d="M6 1L7.2 4.4H11L8.1 6.5L9.3 10L6 7.8L2.7 10L3.9 6.5L1 4.4H4.8L6 1Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                                    </svg>
+                                    Signaux à surveiller
+                                </p>
+                                <p class="scam-panel__text">
+                                    Toute demande d'argent avant la visite physique. Communication par email uniquement. Demande de paiement par virement international, mandat Western Union ou Mandat Cash. Prix attractif utilisé comme appât pour motiver le versement rapide.
+                                </p>
+                            </div>
+                            <div class="scam-panel scam-panel--defense">
+                                <p class="scam-panel__label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                        <path d="M6 1.5L10 3V6.5C10 8.7 8.2 10.7 6 11.5C3.8 10.7 2 8.7 2 6.5V3L6 1.5Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                                    </svg>
+                                    Se défendre
+                                </p>
+                                <p class="scam-panel__text">
+                                    La règle est absolue : aucun acompte avant la visite. Si vous souhaitez formaliser votre intention après une visite concluante, utilisez un bon de commande signé des deux parties (pas un virement) et vérifiez que le vendeur est bien propriétaire du véhicule. En cas d'escroquerie, signalez-la via la plateforme THESEE (accessible depuis service-public.fr, rubrique « arnaque sur internet ») et déposez plainte. Vous pouvez aussi appeler le numéro INFO ESCROQUERIES : 0805 805 817 (appel gratuit).
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===============================================
+             PARTIE 3 — RÉFLEXES + TEST RAPIDE
+        ================================================ -->
+        <section class="section-part" aria-labelledby="part3-title">
+            <div class="container">
+
+                <div class="section-heading" data-animate>
+                    <p class="section-heading__eyebrow">Partie 3</p>
+                    <h2 class="section-heading__title" id="part3-title">
+                        Les bons réflexes<br>avant de se déplacer
+                    </h2>
+                    <p class="section-heading__intro">
+                        Quelques vérifications rapides, toutes gratuites, peuvent vous faire gagner un aller-retour inutile — ou vous éviter une arnaque.
+                    </p>
+                </div>
+
+                <div class="part3-layout">
+
+                    <!-- Colonne réflexes -->
+                    <div>
+                        <div class="reflexes-list">
+
+                            <div class="reflex-item" data-animate>
+                                <span class="reflex-item__number" aria-hidden="true">1</span>
+                                <div>
+                                    <p class="reflex-item__text">Vérifiez l'identité du vendeur</p>
+                                    <p class="reflex-item__sub">Demandez son nom et prénom, et vérifiez qu'ils correspondent à la carte grise. Un vendeur qui vend « pour un ami » ou au nom d'une société non déclarée doit être questionné.</p>
+                                </div>
+                            </div>
+
+                            <div class="reflex-item" data-animate>
+                                <span class="reflex-item__number" aria-hidden="true">2</span>
+                                <div>
+                                    <p class="reflex-item__text">Consultez HistoVec avant de vous déplacer</p>
+                                    <p class="reflex-item__sub">Le service officiel gratuit du Ministère de l'Intérieur (histovec.interieur.gouv.fr) affiche l'historique des sinistres déclarés, les kilométrages successifs, le statut VGE, et les éventuelles oppositions. Indispensable.</p>
+                                </div>
+                            </div>
+
+                            <div class="reflex-item" data-animate>
+                                <span class="reflex-item__number" aria-hidden="true">3</span>
+                                <div>
+                                    <p class="reflex-item__text">Vérifiez le certificat de non-gage</p>
+                                    <p class="reflex-item__sub">Disponible sur le même service HistoVec. Il atteste qu'aucun créancier n'a inscrit de gage sur le véhicule. Ce document est valable 15 jours et doit être daté de moins de 15 jours au moment de la vente.</p>
+                                </div>
+                            </div>
+
+                            <div class="reflex-item" data-animate>
+                                <span class="reflex-item__number" aria-hidden="true">4</span>
+                                <div>
+                                    <p class="reflex-item__text">Demandez les documents avant la visite</p>
+                                    <p class="reflex-item__sub">Carte grise (pour vérifier le propriétaire, le kilométrage à la première immatriculation, et la mention éventuelle de VGE), les deux derniers rapports de contrôle technique, et si possible les principales factures d'entretien.</p>
+                                </div>
+                            </div>
+
+                            <div class="reflex-item" data-animate>
+                                <span class="reflex-item__number" aria-hidden="true">5</span>
+                                <div>
+                                    <p class="reflex-item__text">Ne versez aucun argent à distance</p>
+                                    <p class="reflex-item__sub">Aucun acompte, aucun frais de transport, aucun dépôt de garantie. Le paiement intégral se fait en personne, le jour de la remise des clés, après signature du bon de cession. Chèque de banque ou virement au moment de la vente uniquement.</p>
+                                </div>
+                            </div>
+
+                            <div class="reflex-item" data-animate>
+                                <span class="reflex-item__number" aria-hidden="true">6</span>
+                                <div>
+                                    <p class="reflex-item__text">Faites expertiser si le montant est important</p>
+                                    <p class="reflex-item__sub">Pour un véhicule à plus de 5 000 €, une expertise par un professionnel indépendant (environ 100 à 200 €) est un investissement raisonnable. Certains organismes proposent des expertises mobiles sur site. Proposer une expertise est un droit de l'acheteur ; un vendeur honnête ne s'y opposera pas.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Widget Test rapide -->
+                    <div>
+                        <div class="test-widget" role="complementary" aria-labelledby="test-widget-title">
+
+                            <div class="test-widget__header">
+                                <h3 class="test-widget__title" id="test-widget-title">
+                                    Test rapide de l'annonce
+                                </h3>
+                                <p class="test-widget__subtitle">
+                                    Cochez les signaux présents dans l'annonce que vous évaluez.
+                                    <br>
+                                    <span style="margin-top: var(--space-1); display: inline-block;">
+                                        <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: var(--color-critical); opacity: 0.7; vertical-align: middle; margin-right: 4px;"></span>
+                                        = signal grave
+                                    </span>
+                                </p>
+                            </div>
+
+                            <!-- Signaux — remplis par annonces.js -->
+                            <div
+                                class="test-signals"
+                                id="test-signals-list"
+                                role="group"
+                                aria-label="Signaux d'alerte à évaluer"
+                            >
+                                <!-- Généré par JavaScript -->
+                                <noscript>
+                                    <p style="padding: var(--space-4); font-size: var(--text-sm); color: var(--text-muted);">
+                                        Ce widget nécessite JavaScript.
+                                    </p>
+                                </noscript>
+                            </div>
+
+                            <!-- Verdict -->
+                            <div
+                                class="test-verdict"
+                                id="test-verdict"
+                                data-level="neutral"
+                                role="status"
+                                aria-live="polite"
+                                aria-label="Résultat du test"
+                            >
+                                <p class="test-verdict__level" id="test-verdict-level">Résultat</p>
+                                <p class="test-verdict__message" id="test-verdict-message">
+                                    Cochez les signaux présents dans l'annonce pour évaluer son niveau de risque.
+                                </p>
+                            </div>
+
+                            <!-- Réinitialiser -->
+                            <button class="test-reset" id="test-reset-btn" type="button" aria-label="Réinitialiser le test">
+                                Réinitialiser le test
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ===================================================
+         FOOTER
+    ==================================================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__layout">
+
+                <div class="footer__brand">
+                    <a href="index.html" class="logo" aria-label="Veridrive — Accueil">
+                        <div class="logo__mark" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 30 30" fill="none">
+                                <path d="M3 5L15 24L27 5" stroke="var(--color-navy)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 5L15 15L21 5" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span class="logo__wordmark">Veridrive</span>
+                    </a>
+                    <p class="footer__tagline">
+                        Votre compagnon auto indépendant pour acheter en toute confiance.
+                    </p>
+                </div>
+
+                <div class="footer__legal">
+                    <p class="footer__copyright">© 2026 Veridrive. Tous droits réservés.</p>
+                    <nav class="footer__links" aria-label="Liens légaux">
+                        <a href="#">Mentions légales</a>
+                        <a href="#">Confidentialité</a>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/annonces.js"></script>
+</body>
+</html>
